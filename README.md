@@ -2,13 +2,22 @@
 
 Publieke statuspagina in het Nederlands, Engels en Frans, gehost op GitHub Pages. Geen externe lettertypes, trackers, cookies of afhankelijkheden. De taalkeuze wordt lokaal in de browser bewaard, indien beschikbaar. Statussen zijn handmatige mededelingen en geen automatische beschikbaarheidsmetingen.
 
+## Ontwikkeling en publicatie
+
+Nieuwe functies, correcties en statusupdates volgen deze route: **featurebranch → `development` → `main`**.
+
+1. Maak een nieuwe branch vanaf de laatste `development`. Dit is de standaardbranch voor nieuwe pull requests.
+2. Open een pull request naar `development`. GitHub Actions controleert de JavaScript-syntaxis en de statusgegevens. Test de pagina lokaal voordat je de wijziging samenvoegt.
+3. Open zodra de wijzigingen klaar zijn voor publicatie een pull request van `development` naar `main`.
+4. Na samenvoegen naar `main` publiceert GitHub Pages de website. Wijzigingen op `development` publiceren de live website niet.
+
 ## Een update publiceren
 
-1. Open `status.json` in GitHub en kies het potlood om te bewerken.
+1. Maak een branch vanaf `development`, open `status.json` in GitHub en kies het potlood om te bewerken.
 2. Pas de betrokken toepassing(en), de melding en de verwachte hersteltijd aan. Zet `updatedAt` op het tijdstip van de inhoudelijke update, met de juiste Belgische tijdzone (`+02:00` in de zomertijd, `+01:00` in de wintertijd).
 3. Voeg een nieuw bericht bovenaan `updates` toe. Gebruik bij `date` het formaat `YYYY-MM-DD`. Werk dezelfde inhoud ook bij in `translations.en` en `translations.fr`: titel, incident, impact, geruststelling en alle updates. Dienststatussen en `updatedAt` worden gedeeld tussen de talen. Optionele `localizedNames` bij een dienst bevatten de Engelse (`en`) en Franse (`fr`) benaming.
 4. Werk ook `available`, `unavailable` en `assurance` bij als de impact wijzigt. Bij volledig herstel pas je de melding en fase aan, verwijder je de oude herstelverwachting uit de tekst en zet je de diensten op `operational`.
-5. Sla de wijziging op de branch `main` op. GitHub Actions controleert de gegevens en publiceert de pagina. Volg het resultaat in het tabblad **Actions**.
+5. Sla de wijziging op je featurebranch op en open een pull request naar `development`. Publiceer de geteste wijzigingen daarna met een pull request van `development` naar `main`. Volg de controles en publicatie in het tabblad **Actions**.
 
 Toegestane statussen: `offline` (tijdelijk offline), `operational` (beschikbaar), `degraded` (beperkt beschikbaar), `unknown` (nog niet bevestigd).
 
