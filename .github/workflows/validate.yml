@@ -1,0 +1,24 @@
+name: Controleer statuspagina
+
+on:
+  pull_request:
+    branches: [development, main]
+  push:
+    branches: [development]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate status page
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Controleer JavaScript
+        run: node --check app.js
+      - name: Controleer statusgegevens
+        run: node validate.mjs

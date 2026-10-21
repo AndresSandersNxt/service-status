@@ -37,13 +37,17 @@ Voeg waar beschikbaar de PR-link toe. Staat de wijziging nog lokaal of is de fea
 
 1. Maak een eigen branch vanaf de laatste `origin/development` en bewerk `status.json` op die branch. Dit kan ook via het potlood in GitHub.
 2. Pas de betrokken toepassing(en), de melding en de verwachte hersteltijd aan. Zet `updatedAt` op het tijdstip van de inhoudelijke update, met de juiste Belgische tijdzone (`+02:00` in de zomertijd, `+01:00` in de wintertijd).
-3. Voeg een nieuw bericht bovenaan `updates` toe. Gebruik bij `date` het formaat `YYYY-MM-DD`. Werk dezelfde inhoud ook bij in `translations.en` en `translations.fr`: titel, incident, impact, geruststelling en alle updates. Dienststatussen en `updatedAt` worden gedeeld tussen de talen. Optionele `localizedNames` bij een dienst bevatten de Engelse (`en`) en Franse (`fr`) benaming.
-4. Werk ook `available`, `unavailable` en `assurance` bij als de impact wijzigt. Bij volledig herstel pas je de melding en fase aan, verwijder je de oude herstelverwachting uit de tekst en zet je de diensten op `operational`.
+3. Voeg een nieuw bericht bovenaan `updates` toe. Gebruik bij `timestamp` het volledige tijdstip met tijdzone, bijvoorbeeld `2026-10-21T15:45:00+02:00`. Gebruik in alle drie de talen hetzelfde tijdstip; de pagina toont de datum en tijd in Belgische tijd. Werk dezelfde inhoud ook bij in `translations.en` en `translations.fr`: titel, incident, impact, geruststelling en alle updates. Dienststatussen en `updatedAt` worden gedeeld tussen de talen. Optionele `localizedNames` bij een dienst bevatten de Engelse (`en`) en Franse (`fr`) benaming.
+4. Werk ook `available`, `unavailable`, `contractInstructions` (contractaanvragen) en `assurance` (toepassingen die beschikbaar blijven) bij als de impact wijzigt. Bij volledig herstel pas je de melding en fase aan, verwijder je de oude herstelverwachting uit de tekst en zet je de diensten op `operational`.
 5. Open een pull request van je featurebranch naar `development`. Publiceer de geteste wijzigingen daarna via een release-pull-request van `development` naar `main`, zoals hierboven beschreven.
+
+Het veld `date` bij updates blijft behouden voor bezoekers met een eerder geopend tabblad. Houd dit gelijk aan de Belgische datum van `timestamp`.
 
 Toegestane statussen: `offline` (tijdelijk offline), `operational` (beschikbaar), `degraded` (beperkt beschikbaar), `unknown` (nog niet bevestigd).
 
 Voeg bij diensten die uitsluitend via VPN bereikbaar zijn `"access": "vpn"` toe. Bij de status `operational` toont de pagina dan expliciet **Beschikbaar via VPN**, met de bijbehorende Engelse en Franse vertaling. Verwijder `access` zodra de dienst ook zonder VPN bereikbaar is.
+
+Voeg bij elke toepassing met gepland onderhoud `"maintenanceStartsAt": "2026-10-21T15:45:00+02:00"` toe, met het juiste tijdstip en de juiste tijdzone. De tabel toont de huidige beschikbaarheid en daaronder wanneer de toepassing offline gaat voor onderhoud. Bij toepassingen die al offline zijn, vermeldt de tabel wanneer het onderhoud gepland is. Alle tijden worden in Belgische tijd getoond. Laat dit veld weg bij toepassingen zonder gepland onderhoud. Werk bij de start van het onderhoud de status handmatig bij naar `offline` en verwijder `maintenanceStartsAt`; bevestig herstel voordat je de status weer op `operational` zet.
 
 De pagina haalt elke minuut de laatste gegevens op wanneer het tabblad zichtbaar is. Bezoekers kunnen ook op **Vernieuwen** klikken. Publicatie en caching via GitHub kunnen kort duren. De publicatie gebruikt automatisch versiegebonden URL’s voor JavaScript en CSS, zodat een nieuwe pagina geen verouderd script uit de browsercache gebruikt. Het tijdstip op de pagina verwijst naar de inhoudelijke update, niet naar de laatste raadpleging.
 
@@ -65,4 +69,4 @@ In Conductor start de **Run**-knop dezelfde server op de toegewezen `CONDUCTOR_P
 
 ## Redactioneel
 
-De eerste melding is overgenomen uit het aangeleverde bericht en gedateerd op 21 oktober 2026. De tijden van 16.00 en 17.00 uur zijn verwachtingen, geen bevestigde hersteltijden. Publiceer uitsluitend bevestigde informatie en pas verstreken verwachtingen aan zodra nieuwe informatie beschikbaar is. Alle bestanden en de volledige wijzigingsgeschiedenis van deze publieke repository zijn openbaar.
+De eerste melding is overgenomen uit het aangeleverde bericht en gedateerd op 21 oktober 2026. De veiligheidsupdate start volgens de CIO op 21 oktober om 15.45 uur. Voor NxtMatch, NxtPlan en NxtPay wordt maximaal 1 uur onderbreking verwacht; voor Harry kan dit langer duren. Dit zijn verwachtingen, geen bevestigde hersteltijden. De dienststatussen tonen de laatst bevestigde beschikbaarheid; pas ze bij de start van de onderbreking en bij bevestigd herstel handmatig aan. Publiceer uitsluitend bevestigde informatie en pas verstreken verwachtingen aan zodra nieuwe informatie beschikbaar is. Alle bestanden en de volledige wijzigingsgeschiedenis van deze publieke repository zijn openbaar.

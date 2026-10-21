@@ -8,7 +8,9 @@ const messages = {
     intro: 'Bekijk wat beschikbaar is, waar er een probleem is en wat we doen om het op te lossen.',
     refresh: 'Vernieuwen', currentIncident: 'Actuele melding', recovery: 'Verwacht herstel', overview: 'OVERZICHT',
     services: 'Status per toepassing', manual: 'Handmatig bijgewerkt', impact: 'Wat betekent dit voor jou?',
-    unavailable: 'Tijdelijk niet mogelijk', vpnOnly: 'Beschikbaar via VPN', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
+    unavailable: 'Impact', vpnOnly: 'Beschikbaar via VPN', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
+    maintenance: time => `Onderhoud gepland vanaf ${time}`,
+    maintenanceOffline: time => `Tijdelijk offline voor onderhoud vanaf ${time}`,
     footer: 'Een helder overzicht. Bijgewerkt zodra er nieuwe informatie is.', timezone: 'Alle tijden zijn Belgische tijd.',
     loading: 'Statusinformatie wordt geladen…', updated: (date, time) => `Laatst bijgewerkt op ${date} om ${time}`,
     refreshed: 'De laatste statusinformatie is opgehaald.',
@@ -24,7 +26,9 @@ const messages = {
     intro: 'See what is available, where there is a problem and what we are doing to resolve it.',
     refresh: 'Refresh', currentIncident: 'Current incident', recovery: 'Expected recovery', overview: 'OVERVIEW',
     services: 'Status by application', manual: 'Manually updated', impact: 'What does this mean for you?',
-    unavailable: 'Temporarily unavailable', vpnOnly: 'Available via VPN', latest: 'LATEST INFORMATION', updates: 'Updates',
+    unavailable: 'Impact', vpnOnly: 'Available via VPN', latest: 'LATEST INFORMATION', updates: 'Updates',
+    maintenance: time => `Maintenance scheduled from ${time}`,
+    maintenanceOffline: time => `Temporarily offline for maintenance from ${time}`,
     footer: 'A clear overview. Updated as soon as new information is available.', timezone: 'All times are Belgian time.',
     loading: 'Loading status information…', updated: (date, time) => `Last updated on ${date} at ${time}`,
     refreshed: 'The latest status information has been retrieved.',
@@ -40,7 +44,9 @@ const messages = {
     intro: 'Consultez les services disponibles, les problèmes en cours et les mesures prises pour les résoudre.',
     refresh: 'Actualiser', currentIncident: 'Incident en cours', recovery: 'Rétablissement prévu', overview: 'VUE D’ENSEMBLE',
     services: 'État par application', manual: 'Mise à jour manuelle', impact: 'Qu’est-ce que cela signifie pour vous ?',
-    unavailable: 'Temporairement indisponible', vpnOnly: 'Disponible via VPN', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
+    unavailable: 'Impact', vpnOnly: 'Disponible via VPN', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
+    maintenance: time => `Maintenance prévue à partir de ${time}`,
+    maintenanceOffline: time => `Temporairement hors ligne pour maintenance à partir de ${time}`,
     footer: 'Une vue d’ensemble claire. Mise à jour dès que de nouvelles informations sont disponibles.', timezone: 'Toutes les heures sont indiquées à l’heure belge.',
     loading: 'Chargement des informations de statut…', updated: (date, time) => `Dernière mise à jour le ${date} à ${time}`,
     refreshed: 'Les dernières informations de statut ont été récupérées.',
@@ -90,21 +96,36 @@ function render() {
   $('summary').textContent = data.incident.summary;
   $('expectation').textContent = data.incident.expectation;
   $('assurance').textContent = data.assurance;
+  $('contract-instructions').textContent = data.contractInstructions;
+  $('communication-title').textContent = data.communicationAdvice.title;
+  $('communication-body').textContent = data.communicationAdvice.body;
   list('unavailable', data.unavailable);
   $('service-list').replaceChildren(...currentData.services.map(service => {
     const status = Object.hasOwn(copy.statuses, service.status) ? service.status : 'unknown';
     const row = element('div', 'service-row');
+    const details = element('div', 'service-status');
     const badge = element('span', `badge status-${status}`);
     const statusLabel = status === 'operational' && service.access === 'vpn' ? copy.vpnOnly : copy.statuses[status];
     badge.append(element('span', 'dot'), document.createTextNode(statusLabel));
-    row.append(element('span', 'service-name', service.localizedNames?.[language] || service.name), badge);
+    details.append(badge);
+    if (service.maintenanceStartsAt) {
+      const start = new Date(service.maintenanceStartsAt);
+      const label = status === 'offline' ? copy.maintenance : copy.maintenanceOffline;
+      const notice = element('time', 'maintenance-note', label(timeFormat.format(start)));
+      notice.dateTime = service.maintenanceStartsAt;
+      notice.title = `${dateFormat.format(start)} · ${timeFormat.format(start)}`;
+      details.append(notice);
+    }
+    row.append(element('span', 'service-name', service.localizedNames?.[language] || service.name), details);
     return row;
   }));
   $('updates-list').replaceChildren(...data.updates.map(update => {
     const row = element('article', 'update');
     const stamp = element('div');
-    const date = element('time', '', dateFormat.format(new Date(`${update.date}T12:00:00+02:00`)));
-    date.dateTime = update.date;
+    const published = new Date(update.timestamp);
+    const date = element('time');
+    date.dateTime = update.timestamp;
+    date.append(element('span', '', dateFormat.format(published)), element('span', 'update-time', timeFormat.format(published)));
     stamp.append(date, element('span', 'update-label', update.label));
     const body = element('div');
     body.append(element('h3', '', update.title), element('p', '', update.body));
