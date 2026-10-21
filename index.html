@@ -11,38 +11,38 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Naar de inhoud</a>
+  <a class="skip" href="#main" data-i18n="skip">Naar de inhoud</a>
   <header class="header wrap">
-    <a class="brand" href="./" aria-label="Servicestatus — startpagina"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i></span>Servicestatus</a>
-    <span class="public-label">Publieke statuspagina</span>
+    <a class="brand" href="./" aria-label="Servicestatus — startpagina" data-i18n-aria-label="home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="title">Servicestatus</span></a>
+    <div class="header-tools"><span class="public-label" data-i18n="publicPage">Publieke statuspagina</span><nav class="languages" aria-label="Taal" data-i18n-aria-label="language"><a href="?lang=nl" lang="nl" hreflang="nl" data-language="nl" aria-current="true">Nederlands</a><a href="?lang=en" lang="en" hreflang="en" data-language="en">English</a><a href="?lang=fr" lang="fr" hreflang="fr" data-language="fr">Français</a></nav></div>
   </header>
   <main id="main" class="wrap">
     <section class="intro">
-      <p class="eyebrow">BESCHIKBAARHEID & UPDATES</p>
-      <h1>Hoe staan onze<br>toepassingen ervoor?</h1>
-      <p class="intro-copy">Bekijk wat beschikbaar is, waar er een probleem is en wat we doen om het op te lossen.</p>
-      <div class="refresh-row"><p id="updated">Statusinformatie wordt geladen…</p><button id="refresh" type="button">↻ <span>Vernieuwen</span></button></div>
+      <p class="eyebrow" data-i18n="eyebrow">BESCHIKBAARHEID & UPDATES</p>
+      <h1><span data-i18n="headingFirst">Hoe staan onze</span><br><span data-i18n="headingSecond">toepassingen ervoor?</span></h1>
+      <p class="intro-copy" data-i18n="intro">Bekijk wat beschikbaar is, waar er een probleem is en wat we doen om het op te lossen.</p>
+      <div class="refresh-row"><p id="updated">Statusinformatie wordt geladen…</p><button id="refresh" type="button">↻ <span data-i18n="refresh">Vernieuwen</span></button></div>
       <p id="feedback" role="status" aria-live="polite"></p>
     </section>
     <div id="content" hidden>
       <section class="incident" aria-labelledby="incident-title">
-        <div class="incident-top"><span class="badge amber"><span class="dot"></span><span id="phase"></span></span><span class="incident-note">Actuele melding</span></div>
+        <div class="incident-top"><span class="badge amber"><span class="dot"></span><span id="phase"></span></span><span class="incident-note" data-i18n="currentIncident">Actuele melding</span></div>
         <h2 id="incident-title"></h2><p id="summary"></p>
-        <div class="expectation"><h3>Verwacht herstel</h3><p id="expectation"></p></div>
+        <div class="expectation"><h3 data-i18n="recovery">Verwacht herstel</h3><p id="expectation"></p></div>
       </section>
       <section class="services section" aria-labelledby="services-title">
-        <div class="section-heading"><div><p class="eyebrow">OVERZICHT</p><h2 id="services-title">Status per toepassing</h2></div><span class="subtle">Handmatig bijgewerkt</span></div>
+        <div class="section-heading"><div><p class="eyebrow" data-i18n="overview">OVERZICHT</p><h2 id="services-title" data-i18n="services">Status per toepassing</h2></div><span class="subtle" data-i18n="manual">Handmatig bijgewerkt</span></div>
         <div id="service-list" class="service-list"></div>
       </section>
-      <section class="impact-grid section" aria-label="Wat betekent dit voor jou?">
-        <div class="impact-card"><span class="card-symbol amber-text" aria-hidden="true">—</span><h2>Tijdelijk niet mogelijk</h2><ul id="unavailable"></ul></div>
-        <div class="impact-card"><span class="card-symbol green-text" aria-hidden="true">✓</span><h2>Blijft werken voor consulenten</h2><ul id="available"></ul></div>
+      <section class="impact-grid section" aria-label="Wat betekent dit voor jou?" data-i18n-aria-label="impact">
+        <div class="impact-card"><span class="card-symbol amber-text" aria-hidden="true">—</span><h2 data-i18n="unavailable">Tijdelijk niet mogelijk</h2><ul id="unavailable"></ul></div>
+        <div class="impact-card"><span class="card-symbol green-text" aria-hidden="true">✓</span><h2 data-i18n="available">Blijft werken voor consulenten</h2><ul id="available"></ul></div>
       </section>
       <aside class="assurance"><span aria-hidden="true">✓</span><p id="assurance"></p></aside>
-      <section class="section updates" aria-labelledby="updates-title"><div class="section-heading"><div><p class="eyebrow">LAATSTE INFORMATIE</p><h2 id="updates-title">Updates</h2></div></div><div id="updates-list"></div></section>
+      <section class="section updates" aria-labelledby="updates-title"><div class="section-heading"><div><p class="eyebrow" data-i18n="latest">LAATSTE INFORMATIE</p><h2 id="updates-title" data-i18n="updates">Updates</h2></div></div><div id="updates-list"></div></section>
     </div>
-    <noscript><div class="incident"><h2>Enkele toepassingen tijdelijk offline</h2><p>NxtForm, NxtPlan app, GoTemp app, Let’s Work app, NxtJob en de AGO-website zijn uit voorzorg offline gehaald. Er is geen impact op verloning en facturatie. Schakel JavaScript in voor de meest recente details.</p></div></noscript>
+    <noscript><div class="incident"><section lang="nl-BE"><h2>Enkele toepassingen tijdelijk offline</h2><p>NxtForm, NxtPlan app, GoTemp app, Let’s Work app, NxtJob en de AGO-website zijn uit voorzorg offline gehaald. Er is geen impact op verloning en facturatie. Schakel JavaScript in voor de meest recente details.</p></section><section lang="en-GB"><h2>Some applications are temporarily offline</h2><p>NxtForm, the NxtPlan app, GoTemp app, Let’s Work app, NxtJob and the AGO website have been taken offline as a precaution. Payroll and invoicing are unaffected. Enable JavaScript for the latest details.</p></section><section lang="fr-BE"><h2>Certaines applications sont temporairement hors ligne</h2><p>NxtForm, les applications NxtPlan, GoTemp et Let’s Work, NxtJob et le site web AGO ont été mis hors ligne par précaution. La paie et la facturation ne sont pas affectées. Activez JavaScript pour consulter les dernières informations.</p></section></div></noscript>
   </main>
-  <footer class="wrap"><p>Een helder overzicht. Bijgewerkt zodra er nieuwe informatie is.</p><p>Alle tijden zijn Belgische tijd.</p></footer>
+  <footer class="wrap"><p data-i18n="footer">Een helder overzicht. Bijgewerkt zodra er nieuwe informatie is.</p><p data-i18n="timezone">Alle tijden zijn Belgische tijd.</p></footer>
 </body>
 </html>

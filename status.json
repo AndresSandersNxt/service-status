@@ -8,17 +8,116 @@
     "expectation": "De leverancier verwacht op 21 oktober rond 16.00 uur een oplossing beschikbaar te stellen. Zodra die beschikbaar is, installeren en testen we die meteen. We verwachten de toepassingen rond 17.00 uur opnieuw beschikbaar te hebben, als de installatie en de tests goed verlopen. Dit is een verwachting, geen bevestigde hersteltijd."
   },
   "services": [
-    {"name": "NxtForm", "status": "offline"},
-    {"name": "NxtPlan app", "status": "offline"},
-    {"name": "GoTemp app", "status": "offline"},
-    {"name": "Let’s Work app", "status": "offline"},
-    {"name": "NxtJob", "status": "offline"},
-    {"name": "AGO-website", "status": "offline"}
+    {
+      "name": "NxtForm",
+      "status": "offline"
+    },
+    {
+      "name": "NxtPlan app",
+      "status": "offline"
+    },
+    {
+      "name": "GoTemp app",
+      "status": "offline"
+    },
+    {
+      "name": "Let’s Work app",
+      "status": "offline"
+    },
+    {
+      "name": "NxtJob",
+      "status": "offline"
+    },
+    {
+      "name": "AGO-website",
+      "status": "offline",
+      "localizedNames": {
+        "en": "AGO website",
+        "fr": "Site web AGO"
+      }
+    }
   ],
-  "unavailable": ["Journeys invullen", "Tijdsregistratie via de NxtPlan app", "Beschikbaarheden doorgeven via de app", "Solliciteren via de AGO-website"],
-  "available": ["Matching", "Kandidaten bellen en voorstellen", "Planningen maken", "Contracten maken"],
+  "unavailable": [
+    "Journeys invullen",
+    "Tijdsregistratie via de NxtPlan app",
+    "Beschikbaarheden doorgeven via de app",
+    "Solliciteren via de AGO-website"
+  ],
+  "available": [
+    "Matching",
+    "Kandidaten bellen en voorstellen",
+    "Planningen maken",
+    "Contracten maken"
+  ],
   "assurance": "Er is geen impact op verloning en facturatie.",
   "updates": [
-    {"date": "2026-10-21", "label": "Eerste melding", "title": "Toepassingen uit voorzorg offline gehaald", "body": "NxtForm, de NxtPlan app, de GoTemp app, de Let’s Work app, NxtJob en de AGO-website zijn tijdelijk offline gehaald vanwege een beveiligingsprobleem bij een externe softwareleverancier. Zodra er bevestigde nieuwe informatie is, werken we deze pagina bij."}
-  ]
+    {
+      "date": "2026-10-21",
+      "label": "Eerste melding",
+      "title": "Toepassingen uit voorzorg offline gehaald",
+      "body": "NxtForm, de NxtPlan app, de GoTemp app, de Let’s Work app, NxtJob en de AGO-website zijn tijdelijk offline gehaald vanwege een beveiligingsprobleem bij een externe softwareleverancier. Zodra er bevestigde nieuwe informatie is, werken we deze pagina bij."
+    }
+  ],
+  "translations": {
+    "en": {
+      "title": "Service status",
+      "incident": {
+        "title": "Some applications are temporarily offline",
+        "summary": "Following reports of a worldwide security issue in software from an external supplier, we have temporarily taken some applications offline as a precaution.",
+        "phase": "In progress",
+        "expectation": "The supplier expects to release a fix on 21 October at around 16:00. As soon as it is available, we will install and test it immediately. We expect the applications to be available again at around 17:00, provided the installation and tests are successful. This is an estimate, not a confirmed recovery time."
+      },
+      "unavailable": [
+        "Completing journeys",
+        "Time tracking via the NxtPlan app",
+        "Submitting availability via the app",
+        "Applying for jobs via the AGO website"
+      ],
+      "available": [
+        "Matching",
+        "Calling and presenting candidates",
+        "Creating schedules",
+        "Creating contracts"
+      ],
+      "assurance": "Payroll and invoicing are unaffected.",
+      "updates": [
+        {
+          "date": "2026-10-21",
+          "label": "Initial notice",
+          "title": "Applications taken offline as a precaution",
+          "body": "NxtForm, the NxtPlan app, the GoTemp app, the Let’s Work app, NxtJob and the AGO website have been temporarily taken offline due to a security issue at an external software supplier. We will update this page as soon as new information is confirmed."
+        }
+      ]
+    },
+    "fr": {
+      "title": "État des services",
+      "incident": {
+        "title": "Certaines applications sont temporairement hors ligne",
+        "summary": "À la suite du signalement d’un problème de sécurité mondial dans un logiciel d’un fournisseur externe, nous avons temporairement mis certaines applications hors ligne par précaution.",
+        "phase": "En cours de traitement",
+        "expectation": "Le fournisseur prévoit de proposer un correctif le 21 octobre vers 16 h. Dès qu’il sera disponible, nous l’installerons et le testerons immédiatement. Nous prévoyons que les applications seront à nouveau disponibles vers 17 h, sous réserve du bon déroulement de l’installation et des tests. Il s’agit d’une estimation, et non d’une heure de rétablissement confirmée."
+      },
+      "unavailable": [
+        "Compléter les parcours",
+        "Enregistrer les heures via l’application NxtPlan",
+        "Communiquer ses disponibilités via l’application",
+        "Postuler via le site web AGO"
+      ],
+      "available": [
+        "Matching",
+        "Appeler et présenter des candidats",
+        "Créer des plannings",
+        "Créer des contrats"
+      ],
+      "assurance": "La paie et la facturation ne sont pas affectées.",
+      "updates": [
+        {
+          "date": "2026-10-21",
+          "label": "Premier signalement",
+          "title": "Applications mises hors ligne par précaution",
+          "body": "NxtForm, les applications NxtPlan, GoTemp et Let’s Work, NxtJob et le site web AGO ont été temporairement mis hors ligne en raison d’un problème de sécurité chez un fournisseur de logiciels externe. Nous mettrons cette page à jour dès que de nouvelles informations seront confirmées."
+        }
+      ]
+    }
+  }
 }
