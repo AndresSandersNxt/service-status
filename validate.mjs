@@ -22,6 +22,7 @@ assert.ok(Array.isArray(data.services));
 for (const service of data.services) {
   text(service.name);
   assert.ok(['offline', 'operational', 'degraded', 'unknown'].includes(service.status), 'Onbekende dienststatus');
+  if (service.access !== undefined) assert.equal(service.access, 'vpn', 'Onbekende toegangsbeperking');
   if (service.localizedNames) for (const language of ['en', 'fr']) text(service.localizedNames[language]);
 }
 validateContent(data);

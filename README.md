@@ -12,6 +12,8 @@ Publieke statuspagina in het Nederlands, Engels en Frans, gehost op GitHub Pages
 
 Toegestane statussen: `offline` (tijdelijk offline), `operational` (beschikbaar), `degraded` (beperkt beschikbaar), `unknown` (nog niet bevestigd).
 
+Voeg bij diensten die uitsluitend via VPN bereikbaar zijn `"access": "vpn"` toe. Bij de status `operational` toont de pagina dan expliciet **Beschikbaar via VPN**, met de bijbehorende Engelse en Franse vertaling. Verwijder `access` zodra de dienst ook zonder VPN bereikbaar is.
+
 De pagina haalt elke minuut de laatste gegevens op wanneer het tabblad zichtbaar is. Bezoekers kunnen ook op **Vernieuwen** klikken. Publicatie en caching via GitHub kunnen kort duren. Het tijdstip op de pagina verwijst naar de inhoudelijke update, niet naar de laatste raadpleging.
 
 ## Talen
