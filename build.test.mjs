@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdtempSync, readFileSync, readdirSync, rmSync, appendFileSync } from 'node:fs';
+import { copyFileSync, cpSync, mkdtempSync, readFileSync, readdirSync, rmSync, appendFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
@@ -11,11 +11,21 @@ test('deployments bypass cached assets whenever their contents change', () => {
     for (const name of ['build.mjs', 'index.html', 'app.js', 'styles.css', 'status.json', 'favicon.svg']) {
       copyFileSync(new URL(name, import.meta.url), join(directory, name));
     }
+    cpSync(new URL('./assets/', import.meta.url), join(directory, 'assets'), { recursive: true });
     const build = () => {
       execFileSync(process.execPath, ['build.mjs'], { cwd: directory });
       const html = readFileSync(join(directory, '_site/index.html'), 'utf8');
       const script = html.match(/<script src="([^"]+)"/)[1];
       const stylesheet = html.match(/<link rel="stylesheet" href="([^"]+)"/)[1];
+      const css = readFileSync(join(directory, '_site/styles.css'), 'utf8');
+      const brandAssets = [
+        ...[...html.matchAll(/(?:src|href)="(assets\/[^"]+)"/g)].map(match => match[1]),
+        ...[...css.matchAll(/url\("(assets\/[^\"]+)"\)/g)].map(match => match[1])
+      ];
+      assert.ok(brandAssets.length > 0, 'The page must reference its brand assets');
+      for (const asset of brandAssets) {
+        assert.deepEqual(readFileSync(join(directory, '_site', asset)), readFileSync(join(directory, asset)), `Missing or changed brand asset: ${asset}`);
+      }
       for (const url of [script, stylesheet]) {
         const asset = new URL(url, 'https://example.com/service-status/');
         assert.equal(asset.origin, 'https://example.com');
@@ -27,7 +37,7 @@ test('deployments bypass cached assets whenever their contents change', () => {
       return { script, stylesheet };
     };
     const first = build();
-    assert.deepEqual(readdirSync(join(directory, '_site')).sort(), ['.nojekyll', 'app.js', 'favicon.svg', 'index.html', 'status.json', 'styles.css']);
+    assert.deepEqual(readdirSync(join(directory, '_site')).sort(), ['.nojekyll', 'app.js', 'assets', 'favicon.svg', 'index.html', 'status.json', 'styles.css']);
     assert.deepEqual(build(), first, 'Identical builds must keep the same asset URLs');
 
     appendFileSync(join(directory, 'app.js'), '\n// Updated script\n');

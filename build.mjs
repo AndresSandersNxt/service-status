@@ -1,8 +1,9 @@
 import { createHash } from 'node:crypto';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 const output = new URL('./_site/', import.meta.url);
 mkdirSync(output, { recursive: true });
+cpSync(new URL('./assets/', import.meta.url), new URL('assets/', output), { recursive: true });
 let html = readFileSync(new URL('./index.html', import.meta.url), 'utf8');
 for (const name of ['app.js', 'styles.css', 'status.json', 'favicon.svg']) {
   const content = readFileSync(new URL(name, import.meta.url));
