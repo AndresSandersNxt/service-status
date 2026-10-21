@@ -86,7 +86,6 @@ function render() {
   const updated = new Date(currentData.updatedAt);
   document.title = data.title;
   $('updated').textContent = copy.updated(dateFormat.format(updated), timeFormat.format(updated));
-  $('phase').textContent = data.incident.phase;
   $('incident-title').textContent = data.incident.title;
   $('summary').textContent = data.incident.summary;
   $('expectation').textContent = data.incident.expectation;
