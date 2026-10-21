@@ -4,7 +4,7 @@
   "updatedAt": "2026-10-21T19:14:16+02:00",
   "incident": {
     "title": "Veiligheidsupdate: NxtPay opnieuw beschikbaar",
-    "summary": "Door een wereldwijd beveiligingsprobleem bij een externe softwareleverancier zijn applicaties uit voorzorg tijdelijk offline gehaald voor een veiligheidsupdate. NxtPay is opnieuw beschikbaar voor iedereen, ook buiten België. De overige getroffen applicaties zijn nog offline. Voor de overige getroffen applicaties blijven de bestaande toegangsbeperkingen buiten België gelden.",
+    "summary": "Door een wereldwijd beveiligingsprobleem bij een externe softwareleverancier zijn applicaties uit voorzorg tijdelijk offline gehaald voor een veiligheidsupdate. NxtPay is opnieuw beschikbaar voor iedereen, ook buiten België. De overige getroffen applicaties zijn nog offline.",
     "phase": "Gedeeltelijk herstel: NxtPay opnieuw online",
     "expectation": "Het herstel van de overige diensten duurt langer dan verwacht. Er is nog geen nieuwe hersteltijd bevestigd. We laten weten zodra meer applicaties weer online zijn. Volg deze pagina voor updates."
   },
@@ -249,7 +249,7 @@
       "title": "Service status",
       "incident": {
         "title": "Security update: NxtPay available again",
-        "summary": "Due to a worldwide security issue at an external software supplier, applications have been temporarily taken offline as a precaution for a security update. NxtPay is available again for everyone, including outside Belgium. The other affected applications are still offline. Existing access restrictions outside Belgium remain in place for the other affected applications.",
+        "summary": "Due to a worldwide security issue at an external software supplier, applications have been temporarily taken offline as a precaution for a security update. NxtPay is available again for everyone, including outside Belgium. The other affected applications are still offline.",
         "phase": "Partial recovery: NxtPay back online",
         "expectation": "Recovery of the remaining services is taking longer than expected. No new recovery time has been confirmed. We will let you know as more applications come back online. Follow this page for updates."
       },
@@ -375,7 +375,7 @@
       "title": "État des services",
       "incident": {
         "title": "Mise à jour de sécurité : NxtPay de nouveau disponible",
-        "summary": "En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, des applications ont été temporairement mises hors ligne par précaution pour une mise à jour de sécurité. NxtPay est de nouveau disponible pour tout le monde, y compris hors de Belgique. Les autres applications concernées sont toujours hors ligne. Les restrictions d’accès existantes hors de Belgique restent en vigueur pour les autres applications concernées.",
+        "summary": "En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, des applications ont été temporairement mises hors ligne par précaution pour une mise à jour de sécurité. NxtPay est de nouveau disponible pour tout le monde, y compris hors de Belgique. Les autres applications concernées sont toujours hors ligne.",
         "phase": "Rétablissement partiel : NxtPay de nouveau en ligne",
         "expectation": "Le rétablissement des autres services prend plus de temps que prévu. Aucun nouvel horaire de rétablissement n’a été confirmé. Nous vous informerons à mesure que d’autres applications seront de nouveau en ligne. Suivez cette page pour les mises à jour."
       },
