@@ -1,7 +1,7 @@
 {
   "updateInProgress": true,
   "title": "Servicestatus",
-  "updatedAt": "2026-10-21T20:42:27+02:00",
+  "updatedAt": "2026-10-21T20:43:49+02:00",
   "incident": {
     "title": "Veiligheidsupdate: applicaties komen geleidelijk weer online",
     "summary": "Door een wereldwijd beveiligingsprobleem bij een externe softwareleverancier zijn applicaties uit voorzorg tijdelijk offline gehaald voor een veiligheidsupdate. Een deel van de applicaties is opnieuw beschikbaar. Het herstel van de overige applicaties is nog bezig. Bekijk ‘Status per applicatie’ hieronder voor de actuele beschikbaarheid en eventuele toegangsbeperkingen.",
@@ -39,7 +39,7 @@
     },
     {
       "name": "NxtJob",
-      "status": "offline"
+      "status": "operational"
     },
     {
       "name": "AGO-website",
@@ -133,7 +133,7 @@
     }
   ],
   "unavailable": [
-    "Nu al offline voor iedereen: de mobiele apps van NxtPlan, GoTemp en Let’s Work, NxtJob, de GoTemp-website, de website van The People Panel, MyAgo en AGO Insights. Daardoor kun je onder meer geen tijd registreren of beschikbaarheden doorgeven via de mobiele apps.",
+    "Nu al offline voor iedereen: de mobiele apps van NxtPlan, GoTemp en Let’s Work, de GoTemp-website, de website van The People Panel, MyAgo en AGO Insights. Daardoor kun je onder meer geen tijd registreren of beschikbaarheden doorgeven via de mobiele apps.",
     "Administratie project en de Let’s Work-website zijn nog tijdelijk offline voor de veiligheidsupdate. Harry en NxtPay zijn opnieuw beschikbaar voor iedereen, in alle landen. NxtAdmin is opnieuw beschikbaar. Alle Microsoft-applicaties blijven beschikbaar. Easypay blijft alleen in België beschikbaar.",
     "Grotere impact buiten België: Administratie project en Easypay zijn daar nog niet toegankelijk, zelfs niet via VPN. De beperking tot België in het overzicht geldt voor deze diensten. Harry, NxtPay, NxtPlan en Salesbuddy zijn opnieuw beschikbaar voor iedereen, ook voor collega’s van AGO France en Plus.",
     "Planningen die na 15.30 uur binnenkomen, verwerk je zodra de applicaties weer online zijn."
@@ -148,10 +148,18 @@
     "De AGO-website is opnieuw beschikbaar voor iedereen, in alle landen",
     "NxtPlan is opnieuw beschikbaar voor iedereen, in alle landen",
     "Salesbuddy is opnieuw beschikbaar voor iedereen, in alle landen",
+    "NxtJob is opnieuw beschikbaar voor iedereen, in alle landen",
     "Easypay blijft alleen in België beschikbaar"
   ],
-  "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, het AGO-intranet, de AGO-website, NxtPlan en Salesbuddy zijn opnieuw beschikbaar voor iedereen, in alle landen.",
+  "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, het AGO-intranet, de AGO-website, NxtPlan, NxtJob en Salesbuddy zijn opnieuw beschikbaar voor iedereen, in alle landen.",
   "updates": [
+    {
+      "date": "2026-10-21",
+      "timestamp": "2026-10-21T20:43:49+02:00",
+      "label": "Statusupdate",
+      "title": "NxtJob opnieuw online",
+      "body": "NxtJob is opnieuw beschikbaar voor iedereen, in alle landen. Bekijk ‘Status per applicatie’ voor de actuele beschikbaarheid van alle diensten."
+    },
     {
       "date": "2026-10-21",
       "timestamp": "2026-10-21T20:42:27+02:00",
@@ -317,7 +325,7 @@
         "expectation": "Recovery of the remaining services is taking longer than expected. No new recovery time has been confirmed. We will let you know as more applications come back online. Follow this page for updates."
       },
       "unavailable": [
-        "Already offline for everyone: the NxtPlan, GoTemp and Let’s Work mobile apps, NxtJob, the GoTemp website, the website of The People Panel, MyAgo and AGO Insights. This prevents activities including tracking time or submitting availability via the mobile apps.",
+        "Already offline for everyone: the NxtPlan, GoTemp and Let’s Work mobile apps, the GoTemp website, the website of The People Panel, MyAgo and AGO Insights. This prevents activities including tracking time or submitting availability via the mobile apps.",
         "Administratie project and the Let’s Work website are still temporarily offline for the security update. Harry and NxtPay are available again for everyone, in all countries. NxtAdmin is available again. All Microsoft applications remain available. Easypay remains available in Belgium only.",
         "Greater impact outside Belgium: Administratie project and Easypay are still inaccessible there, even via VPN. The Belgium-only restriction in the overview applies to these services. Harry, NxtPay, NxtPlan and Salesbuddy are available again for everyone, including colleagues at AGO France and Plus.",
         "Process schedules received after 15:30 once the applications are back online."
@@ -332,10 +340,18 @@
         "The AGO website is available again for everyone, in all countries",
         "NxtPlan is available again for everyone, in all countries",
         "Salesbuddy is available again for everyone, in all countries",
+        "NxtJob is available again for everyone, in all countries",
         "Easypay remains available in Belgium only"
       ],
-      "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, the AGO intranet, the AGO website, NxtPlan and Salesbuddy are available again for everyone, in all countries.",
+      "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, the AGO intranet, the AGO website, NxtPlan, NxtJob and Salesbuddy are available again for everyone, in all countries.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T20:43:49+02:00",
+          "label": "Status update",
+          "title": "NxtJob back online",
+          "body": "NxtJob is available again for everyone, in all countries. See ‘Status by application’ for the current availability of all services."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T20:42:27+02:00",
@@ -506,7 +522,7 @@
         "expectation": "Le rétablissement des autres services prend plus de temps que prévu. Aucun nouvel horaire de rétablissement n’a été confirmé. Nous vous informerons à mesure que d’autres applications seront de nouveau en ligne. Suivez cette page pour les mises à jour."
       },
       "unavailable": [
-        "Déjà hors ligne pour tout le monde : les applications mobiles NxtPlan, GoTemp et Let’s Work, NxtJob, le site web GoTemp, le site web The People Panel, MyAgo et AGO Insights. Cela empêche notamment d’enregistrer les heures ou de communiquer ses disponibilités via les applications mobiles.",
+        "Déjà hors ligne pour tout le monde : les applications mobiles NxtPlan, GoTemp et Let’s Work, le site web GoTemp, le site web The People Panel, MyAgo et AGO Insights. Cela empêche notamment d’enregistrer les heures ou de communiquer ses disponibilités via les applications mobiles.",
         "Administratie project et le site web Let’s Work sont toujours temporairement hors ligne pour la mise à jour de sécurité. Harry et NxtPay sont de nouveau disponibles pour tout le monde, dans tous les pays. NxtAdmin est de nouveau disponible. Toutes les applications Microsoft restent disponibles. Easypay reste disponible uniquement en Belgique.",
         "Impact plus important hors de Belgique : Administratie project et Easypay y sont toujours inaccessibles, même via VPN. La restriction à la Belgique indiquée dans le tableau s’applique à ces services. Harry, NxtPay, NxtPlan et Salesbuddy sont de nouveau disponibles pour tout le monde, y compris pour les collègues d’AGO France et de Plus.",
         "Traitez les plannings reçus après 15h30 dès que les applications seront de nouveau en ligne."
@@ -521,10 +537,18 @@
         "Le site web AGO est de nouveau disponible pour tout le monde, dans tous les pays",
         "NxtPlan est de nouveau disponible pour tout le monde, dans tous les pays",
         "Salesbuddy est de nouveau disponible pour tout le monde, dans tous les pays",
+        "NxtJob est de nouveau disponible pour tout le monde, dans tous les pays",
         "Easypay reste disponible uniquement en Belgique"
       ],
-      "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, l’intranet AGO, le site web AGO, NxtPlan et Salesbuddy sont de nouveau disponibles pour tout le monde, dans tous les pays.",
+      "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, l’intranet AGO, le site web AGO, NxtPlan, NxtJob et Salesbuddy sont de nouveau disponibles pour tout le monde, dans tous les pays.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T20:43:49+02:00",
+          "label": "Mise à jour",
+          "title": "NxtJob de nouveau en ligne",
+          "body": "NxtJob est de nouveau disponible pour tout le monde, dans tous les pays. Consultez « État par application » pour connaître la disponibilité actuelle de tous les services."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T20:42:27+02:00",
