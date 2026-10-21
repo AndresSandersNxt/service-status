@@ -1,9 +1,9 @@
 {
   "title": "Servicestatus",
-  "updatedAt": "2026-10-21T10:23:00+02:00",
+  "updatedAt": "2026-10-21T11:11:32+02:00",
   "incident": {
     "title": "Enkele toepassingen tijdelijk offline",
-    "summary": "Vanwege een wereldwijd gemeld beveiligingsprobleem in software van een externe leverancier hebben we enkele toepassingen uit voorzorg tijdelijk offline gehaald.",
+    "summary": "Vanwege een wereldwijd gemeld beveiligingsprobleem in software van een externe leverancier hebben we enkele toepassingen uit voorzorg tijdelijk offline gehaald. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry en Easypay blijven beschikbaar, uitsluitend via VPN.",
     "phase": "In behandeling",
     "expectation": "De leverancier verwacht op 21 oktober rond 16.00 uur een oplossing beschikbaar te stellen. Zodra die beschikbaar is, installeren en testen we die meteen. We verwachten de toepassingen rond 17.00 uur opnieuw beschikbaar te hebben, als de installatie en de tests goed verlopen. Dit is een verwachting, geen bevestigde hersteltijd."
   },
@@ -13,16 +13,28 @@
       "status": "offline"
     },
     {
-      "name": "NxtPlan app",
-      "status": "offline"
+      "name": "NxtPlan mobiele app",
+      "status": "offline",
+      "localizedNames": {
+        "en": "NxtPlan mobile app",
+        "fr": "Application mobile NxtPlan"
+      }
     },
     {
-      "name": "GoTemp app",
-      "status": "offline"
+      "name": "GoTemp mobiele app",
+      "status": "offline",
+      "localizedNames": {
+        "en": "GoTemp mobile app",
+        "fr": "Application mobile GoTemp"
+      }
     },
     {
-      "name": "Let’s Work app",
-      "status": "offline"
+      "name": "Let’s Work mobiele app",
+      "status": "offline",
+      "localizedNames": {
+        "en": "Let’s Work mobile app",
+        "fr": "Application mobile Let’s Work"
+      }
     },
     {
       "name": "NxtJob",
@@ -35,13 +47,57 @@
         "en": "AGO website",
         "fr": "Site web AGO"
       }
+    },
+    {
+      "name": "AGO-intranet",
+      "status": "offline",
+      "localizedNames": {
+        "en": "AGO intranet",
+        "fr": "Intranet AGO"
+      }
+    },
+    {
+      "name": "NxtPlan",
+      "status": "operational",
+      "access": "vpn"
+    },
+    {
+      "name": "NxtMatch",
+      "status": "operational",
+      "access": "vpn"
+    },
+    {
+      "name": "NxtPay",
+      "status": "operational",
+      "access": "vpn"
+    },
+    {
+      "name": "Salesbuddy",
+      "status": "operational",
+      "access": "vpn"
+    },
+    {
+      "name": "Administratie project",
+      "status": "operational",
+      "access": "vpn"
+    },
+    {
+      "name": "Harry",
+      "status": "operational",
+      "access": "vpn"
+    },
+    {
+      "name": "Easypay",
+      "status": "operational",
+      "access": "vpn"
     }
   ],
   "unavailable": [
     "Journeys invullen",
-    "Tijdsregistratie via de NxtPlan app",
+    "Tijdsregistratie via de mobiele NxtPlan app",
     "Beschikbaarheden doorgeven via de app",
-    "Solliciteren via de AGO-website"
+    "Solliciteren via de AGO-website",
+    "Het AGO-intranet raadplegen"
   ],
   "available": [
     "Matching",
@@ -51,6 +107,18 @@
   ],
   "assurance": "Er is geen impact op verloning en facturatie.",
   "updates": [
+    {
+      "date": "2026-10-21",
+      "label": "Statusupdate",
+      "title": "Easypay beschikbaar via VPN",
+      "body": "Easypay is online en uitsluitend bereikbaar via VPN."
+    },
+    {
+      "date": "2026-10-21",
+      "label": "Statusupdate",
+      "title": "Offline toepassingen en toegang via VPN",
+      "body": "NxtForm, de mobiele apps van NxtPlan, GoTemp en Let’s Work, NxtJob, de AGO-website en het AGO-intranet zijn offline. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project en Harry zijn online, maar uitsluitend bereikbaar via VPN."
+    },
     {
       "date": "2026-10-21",
       "label": "Eerste melding",
@@ -63,15 +131,16 @@
       "title": "Service status",
       "incident": {
         "title": "Some applications are temporarily offline",
-        "summary": "Following reports of a worldwide security issue in software from an external supplier, we have temporarily taken some applications offline as a precaution.",
+        "summary": "Following reports of a worldwide security issue in software from an external supplier, we have temporarily taken some applications offline as a precaution. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry and Easypay remain available, only via VPN.",
         "phase": "In progress",
         "expectation": "The supplier expects to release a fix on 21 October at around 16:00. As soon as it is available, we will install and test it immediately. We expect the applications to be available again at around 17:00, provided the installation and tests are successful. This is an estimate, not a confirmed recovery time."
       },
       "unavailable": [
         "Completing journeys",
-        "Time tracking via the NxtPlan app",
+        "Time tracking via the NxtPlan mobile app",
         "Submitting availability via the app",
-        "Applying for jobs via the AGO website"
+        "Applying for jobs via the AGO website",
+        "Accessing the AGO intranet"
       ],
       "available": [
         "Matching",
@@ -81,6 +150,18 @@
       ],
       "assurance": "Payroll and invoicing are unaffected.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "label": "Status update",
+          "title": "Easypay available via VPN",
+          "body": "Easypay is online and can only be accessed via VPN."
+        },
+        {
+          "date": "2026-10-21",
+          "label": "Status update",
+          "title": "Offline applications and VPN access",
+          "body": "NxtForm, the NxtPlan, GoTemp and Let’s Work mobile apps, NxtJob, the AGO website and the AGO intranet are offline. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project and Harry are online, but can only be accessed via VPN."
+        },
         {
           "date": "2026-10-21",
           "label": "Initial notice",
@@ -93,15 +174,16 @@
       "title": "État des services",
       "incident": {
         "title": "Certaines applications sont temporairement hors ligne",
-        "summary": "À la suite du signalement d’un problème de sécurité mondial dans un logiciel d’un fournisseur externe, nous avons temporairement mis certaines applications hors ligne par précaution.",
+        "summary": "À la suite du signalement d’un problème de sécurité mondial dans un logiciel d’un fournisseur externe, nous avons temporairement mis certaines applications hors ligne par précaution. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry et Easypay restent disponibles, uniquement via VPN.",
         "phase": "En cours de traitement",
         "expectation": "Le fournisseur prévoit de proposer un correctif le 21 octobre vers 16 h. Dès qu’il sera disponible, nous l’installerons et le testerons immédiatement. Nous prévoyons que les applications seront à nouveau disponibles vers 17 h, sous réserve du bon déroulement de l’installation et des tests. Il s’agit d’une estimation, et non d’une heure de rétablissement confirmée."
       },
       "unavailable": [
         "Compléter les parcours",
-        "Enregistrer les heures via l’application NxtPlan",
+        "Enregistrer les heures via l’application mobile NxtPlan",
         "Communiquer ses disponibilités via l’application",
-        "Postuler via le site web AGO"
+        "Postuler via le site web AGO",
+        "Consulter l’intranet AGO"
       ],
       "available": [
         "Matching",
@@ -111,6 +193,18 @@
       ],
       "assurance": "La paie et la facturation ne sont pas affectées.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "label": "Mise à jour",
+          "title": "Easypay disponible via VPN",
+          "body": "Easypay est en ligne et accessible uniquement via VPN."
+        },
+        {
+          "date": "2026-10-21",
+          "label": "Mise à jour",
+          "title": "Applications hors ligne et accès via VPN",
+          "body": "NxtForm, les applications mobiles NxtPlan, GoTemp et Let’s Work, NxtJob, le site web AGO et l’intranet AGO sont hors ligne. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project et Harry sont en ligne, mais accessibles uniquement via VPN."
+        },
         {
           "date": "2026-10-21",
           "label": "Premier signalement",
