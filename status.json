@@ -1,12 +1,12 @@
 {
-  "updateInProgress": true,
+  "updateInProgress": false,
   "title": "Servicestatus",
-  "updatedAt": "2026-10-21T21:58:14+02:00",
+  "updatedAt": "2026-10-21T22:21:31+02:00",
   "incident": {
-    "title": "Veiligheidsupdate: applicaties komen geleidelijk weer online",
-    "summary": "Door een wereldwijd beveiligingsprobleem bij een externe softwareleverancier zijn applicaties uit voorzorg tijdelijk offline gehaald voor een veiligheidsupdate. Een deel van de applicaties is opnieuw beschikbaar. Het herstel van de overige applicaties is nog bezig. Bekijk ‘Status per applicatie’ hieronder voor de actuele beschikbaarheid en eventuele toegangsbeperkingen.",
-    "phase": "Gedeeltelijk herstel",
-    "expectation": "Het herstel van de overige diensten duurt langer dan verwacht. Er is nog geen nieuwe hersteltijd bevestigd. We laten weten zodra meer applicaties weer online zijn. Volg deze pagina voor updates."
+    "title": "Veiligheidsupdate afgerond: alle applicaties terug online",
+    "summary": "Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier moesten we een veiligheidsupdate uitvoeren. Om deze update te installeren, waren alle applicaties tijdelijk offline. Alle applicaties hebben de veiligheidsupdate gekregen en zijn opnieuw beschikbaar. Het AGO-intranet is alleen via VPN bereikbaar.",
+    "phase": "Veiligheidsupdate afgerond; intranet via VPN",
+    "expectation": "Alle applicaties worden verder grondig getest. Ondervind je problemen? Meld ze via buddy@ago.jobs."
   },
   "services": [
     {
@@ -96,8 +96,7 @@
     },
     {
       "name": "Easypay",
-      "status": "operational",
-      "access": "belgium"
+      "status": "operational"
     },
     {
       "name": "Let’s Work-website",
@@ -133,31 +132,20 @@
     }
   ],
   "unavailable": [
-    "De GoTemp-website, de website van The People Panel en AGO Insights zijn opnieuw beschikbaar voor iedereen, in alle landen. De mobiele apps van NxtPlan, GoTemp en Let’s Work zijn opnieuw beschikbaar voor iedereen, in alle landen. MyAgo is opnieuw beschikbaar voor iedereen, in alle landen.",
-    "Administratie project is opnieuw beschikbaar voor iedereen, in alle landen. De Let’s Work-website is opnieuw beschikbaar voor iedereen, in alle landen. Het AGO-intranet is alleen via VPN beschikbaar. Harry en NxtPay zijn opnieuw beschikbaar voor iedereen, in alle landen. NxtAdmin is opnieuw beschikbaar. Alle Microsoft-applicaties blijven beschikbaar. Easypay blijft alleen in België beschikbaar.",
-    "Grotere impact buiten België: Easypay is daar nog niet toegankelijk, zelfs niet via VPN. De beperking tot België in het overzicht geldt voor Easypay. Administratie project, Harry, NxtPay, NxtPlan en Salesbuddy zijn opnieuw beschikbaar voor iedereen, ook voor collega’s van AGO France en Plus.",
-    "Planningen die na 15.30 uur binnenkomen, verwerk je zodra de applicaties weer online zijn."
+    "Het AGO-intranet is alleen via VPN bereikbaar."
   ],
   "available": [
-    "Alle Microsoft-applicaties, waaronder Outlook, blijven beschikbaar",
-    "Harry en NxtPay zijn opnieuw beschikbaar voor iedereen, in alle landen",
-    "NxtAdmin is opnieuw beschikbaar",
-    "NxtMatch is opnieuw beschikbaar voor iedereen, in alle landen",
-    "NxtForm is opnieuw beschikbaar voor iedereen, in alle landen",
-    "Het AGO-intranet is alleen via VPN beschikbaar",
-    "De AGO-website is opnieuw beschikbaar voor iedereen, in alle landen",
-    "NxtPlan is opnieuw beschikbaar voor iedereen, in alle landen",
-    "Salesbuddy is opnieuw beschikbaar voor iedereen, in alle landen",
-    "NxtJob is opnieuw beschikbaar voor iedereen, in alle landen",
-    "De mobiele apps van NxtPlan, GoTemp en Let’s Work zijn opnieuw beschikbaar voor iedereen, in alle landen",
-    "De Let’s Work-website is opnieuw beschikbaar voor iedereen, in alle landen",
-    "Administratie project is opnieuw beschikbaar voor iedereen, in alle landen",
-    "MyAgo is opnieuw beschikbaar voor iedereen, in alle landen",
-    "De GoTemp-website, de website van The People Panel en AGO Insights zijn opnieuw beschikbaar voor iedereen, in alle landen",
-    "Easypay blijft alleen in België beschikbaar"
+    "Alle applicaties zijn opnieuw beschikbaar; het AGO-intranet is alleen via VPN bereikbaar"
   ],
-  "assurance": "De GoTemp-website, de website van The People Panel, AGO Insights, MyAgo, Administratie project, Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, de AGO-website, de Let’s Work-website, NxtPlan, NxtJob, Salesbuddy en de mobiele apps van NxtPlan, GoTemp en Let’s Work zijn opnieuw beschikbaar voor iedereen, in alle landen. Het AGO-intranet is alleen via VPN beschikbaar.",
+  "assurance": "Alle applicaties hebben de veiligheidsupdate gekregen en zijn terug online. Bedankt voor je geduld. Het AGO-intranet is alleen via VPN bereikbaar.",
   "updates": [
+    {
+      "date": "2026-10-21",
+      "timestamp": "2026-10-21T22:21:31+02:00",
+      "label": "Hersteld",
+      "title": "Veiligheidsupdate afgerond — alle applicaties terug online",
+      "body": "Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier moesten we een veiligheidsupdate uitvoeren. Om deze update te installeren, waren alle applicaties tijdelijk offline. Alle applicaties hebben de veiligheidsupdate gekregen en zijn opnieuw beschikbaar. Het AGO-intranet is alleen via VPN bereikbaar. Je kunt alle applicaties weer gebruiken. Bedankt voor je geduld."
+    },
     {
       "date": "2026-10-21",
       "timestamp": "2026-10-21T21:58:14+02:00",
@@ -359,37 +347,26 @@
     "en": {
       "title": "Service status",
       "incident": {
-        "title": "Security update: applications are gradually coming back online",
-        "summary": "Due to a worldwide security issue at an external software supplier, applications have been temporarily taken offline as a precaution for a security update. Some applications are available again. Recovery of the remaining applications is still in progress. See ‘Status by application’ below for current availability and any access restrictions.",
-        "phase": "Partial recovery",
-        "expectation": "Recovery of the remaining services is taking longer than expected. No new recovery time has been confirmed. We will let you know as more applications come back online. Follow this page for updates."
+        "title": "Security update completed: all applications back online",
+        "summary": "A worldwide security issue at an external software supplier required us to carry out a security update. All applications were temporarily offline while we installed this update. All applications have received the security update and are available again. The AGO intranet is accessible via VPN only.",
+        "phase": "Security update complete; intranet via VPN",
+        "expectation": "All applications continue to undergo thorough testing. If you experience any problems, please report them to buddy@ago.jobs."
       },
       "unavailable": [
-        "The GoTemp website, the website of The People Panel and AGO Insights are available again for everyone, in all countries. The NxtPlan, GoTemp and Let’s Work mobile apps are available again for everyone, in all countries. MyAgo is available again for everyone, in all countries.",
-        "Administratie project is available again for everyone, in all countries. The Let’s Work website is available again for everyone, in all countries. The AGO intranet is available via VPN only. Harry and NxtPay are available again for everyone, in all countries. NxtAdmin is available again. All Microsoft applications remain available. Easypay remains available in Belgium only.",
-        "Greater impact outside Belgium: Easypay is still inaccessible there, even via VPN. The Belgium-only restriction in the overview applies to Easypay. Administratie project, Harry, NxtPay, NxtPlan and Salesbuddy are available again for everyone, including colleagues at AGO France and Plus.",
-        "Process schedules received after 15:30 once the applications are back online."
+        "The AGO intranet is accessible via VPN only."
       ],
       "available": [
-        "All Microsoft applications, including Outlook, remain available",
-        "Harry and NxtPay are available again for everyone, in all countries",
-        "NxtAdmin is available again",
-        "NxtMatch is available again for everyone, in all countries",
-        "NxtForm is available again for everyone, in all countries",
-        "The AGO intranet is available via VPN only",
-        "The AGO website is available again for everyone, in all countries",
-        "NxtPlan is available again for everyone, in all countries",
-        "Salesbuddy is available again for everyone, in all countries",
-        "NxtJob is available again for everyone, in all countries",
-        "The NxtPlan, GoTemp and Let’s Work mobile apps are available again for everyone, in all countries",
-        "The Let’s Work website is available again for everyone, in all countries",
-        "Administratie project is available again for everyone, in all countries",
-        "MyAgo is available again for everyone, in all countries",
-        "The GoTemp website, the website of The People Panel and AGO Insights are available again for everyone, in all countries",
-        "Easypay remains available in Belgium only"
+        "All applications are available again; the AGO intranet is accessible via VPN only"
       ],
-      "assurance": "The GoTemp website, the website of The People Panel, AGO Insights, MyAgo, Administratie project, Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, the AGO website, the Let’s Work website, NxtPlan, NxtJob, Salesbuddy and the NxtPlan, GoTemp and Let’s Work mobile apps are available again for everyone, in all countries. The AGO intranet is available via VPN only.",
+      "assurance": "All applications have received the security update and are back online. Thank you for your patience. The AGO intranet is accessible via VPN only.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T22:21:31+02:00",
+          "label": "Resolved",
+          "title": "Security update completed — all applications back online",
+          "body": "A worldwide security issue at an external software supplier required us to carry out a security update. All applications were temporarily offline while we installed this update. All applications have received the security update and are available again. The AGO intranet is accessible via VPN only. You can use all applications again. Thank you for your patience."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T21:58:14+02:00",
@@ -589,44 +566,33 @@
       ],
       "communicationAdvice": {
         "title": "What to tell customers and candidates",
-        "body": "If customers or candidates ask questions, you can say: “Due to a worldwide security issue at an external software supplier, we are working hard on a security update. As a result, some applications are temporarily unavailable.”"
+        "body": "If customers or candidates ask why the applications were offline, you can say: “Due to a worldwide security issue at an external software supplier, we temporarily took all applications offline to carry out a security update. The update is complete and all applications are available again.”"
       },
-      "contractInstructions": "Harry is available again in all countries. Check your schedules now that Harry is available again."
+      "contractInstructions": "All applications are available again. Process any postponed schedules and check your schedules in Harry."
     },
     "fr": {
       "title": "État des services",
       "incident": {
-        "title": "Mise à jour de sécurité : les applications reviennent progressivement en ligne",
-        "summary": "En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, des applications ont été temporairement mises hors ligne par précaution pour une mise à jour de sécurité. Certaines applications sont de nouveau disponibles. Le rétablissement des autres applications est toujours en cours. Consultez « État par application » ci-dessous pour connaître la disponibilité actuelle et les éventuelles restrictions d’accès.",
-        "phase": "Rétablissement partiel",
-        "expectation": "Le rétablissement des autres services prend plus de temps que prévu. Aucun nouvel horaire de rétablissement n’a été confirmé. Nous vous informerons à mesure que d’autres applications seront de nouveau en ligne. Suivez cette page pour les mises à jour."
+        "title": "Mise à jour de sécurité terminée : toutes les applications sont de nouveau en ligne",
+        "summary": "Un problème de sécurité mondial chez un fournisseur de logiciels externe nous a obligés à effectuer une mise à jour de sécurité. Toutes les applications ont été temporairement mises hors ligne pour installer cette mise à jour. Toutes les applications ont reçu la mise à jour de sécurité et sont de nouveau disponibles. L’intranet AGO est accessible uniquement via VPN.",
+        "phase": "Mise à jour de sécurité terminée ; intranet via VPN",
+        "expectation": "Toutes les applications continuent de faire l’objet de tests approfondis. Si vous rencontrez des problèmes, signalez-les à buddy@ago.jobs."
       },
       "unavailable": [
-        "Le site web GoTemp, le site web de The People Panel et AGO Insights sont de nouveau disponibles pour tout le monde, dans tous les pays. Les applications mobiles NxtPlan, GoTemp et Let’s Work sont de nouveau disponibles pour tout le monde, dans tous les pays. MyAgo est de nouveau disponible pour tout le monde, dans tous les pays.",
-        "Administratie project est de nouveau disponible pour tout le monde, dans tous les pays. Le site web Let’s Work est de nouveau disponible pour tout le monde, dans tous les pays. L’intranet AGO est disponible uniquement via VPN. Harry et NxtPay sont de nouveau disponibles pour tout le monde, dans tous les pays. NxtAdmin est de nouveau disponible. Toutes les applications Microsoft restent disponibles. Easypay reste disponible uniquement en Belgique.",
-        "Impact plus important hors de Belgique : Easypay y est toujours inaccessible, même via VPN. La restriction à la Belgique indiquée dans le tableau s’applique à Easypay. Administratie project, Harry, NxtPay, NxtPlan et Salesbuddy sont de nouveau disponibles pour tout le monde, y compris pour les collègues d’AGO France et de Plus.",
-        "Traitez les plannings reçus après 15h30 dès que les applications seront de nouveau en ligne."
+        "L’intranet AGO est accessible uniquement via VPN."
       ],
       "available": [
-        "Toutes les applications Microsoft, dont Outlook, restent disponibles",
-        "Harry et NxtPay sont de nouveau disponibles pour tout le monde, dans tous les pays",
-        "NxtAdmin est de nouveau disponible",
-        "NxtMatch est de nouveau disponible pour tout le monde, dans tous les pays",
-        "NxtForm est de nouveau disponible pour tout le monde, dans tous les pays",
-        "L’intranet AGO est disponible uniquement via VPN",
-        "Le site web AGO est de nouveau disponible pour tout le monde, dans tous les pays",
-        "NxtPlan est de nouveau disponible pour tout le monde, dans tous les pays",
-        "Salesbuddy est de nouveau disponible pour tout le monde, dans tous les pays",
-        "NxtJob est de nouveau disponible pour tout le monde, dans tous les pays",
-        "Les applications mobiles NxtPlan, GoTemp et Let’s Work sont de nouveau disponibles pour tout le monde, dans tous les pays",
-        "Le site web Let’s Work est de nouveau disponible pour tout le monde, dans tous les pays",
-        "Administratie project est de nouveau disponible pour tout le monde, dans tous les pays",
-        "MyAgo est de nouveau disponible pour tout le monde, dans tous les pays",
-        "Le site web GoTemp, le site web de The People Panel et AGO Insights sont de nouveau disponibles pour tout le monde, dans tous les pays",
-        "Easypay reste disponible uniquement en Belgique"
+        "Toutes les applications sont de nouveau disponibles ; l’intranet AGO est accessible uniquement via VPN"
       ],
-      "assurance": "Le site web GoTemp, le site web de The People Panel, AGO Insights, MyAgo, Administratie project, Harry, NxtPay, NxtAdmin, NxtMatch, NxtForm, le site web AGO, le site web Let’s Work, NxtPlan, NxtJob, Salesbuddy et les applications mobiles NxtPlan, GoTemp et Let’s Work sont de nouveau disponibles pour tout le monde, dans tous les pays. L’intranet AGO est disponible uniquement via VPN.",
+      "assurance": "Toutes les applications ont reçu la mise à jour de sécurité et sont de nouveau en ligne. Merci pour votre patience. L’intranet AGO est accessible uniquement via VPN.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T22:21:31+02:00",
+          "label": "Rétabli",
+          "title": "Mise à jour de sécurité terminée — toutes les applications de nouveau en ligne",
+          "body": "Un problème de sécurité mondial chez un fournisseur de logiciels externe nous a obligés à effectuer une mise à jour de sécurité. Toutes les applications ont été temporairement mises hors ligne pour installer cette mise à jour. Toutes les applications ont reçu la mise à jour de sécurité et sont de nouveau disponibles. L’intranet AGO est accessible uniquement via VPN. Vous pouvez à nouveau utiliser toutes les applications. Merci pour votre patience."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T21:58:14+02:00",
@@ -826,14 +792,14 @@
       ],
       "communicationAdvice": {
         "title": "Que dire aux clients et aux candidats ?",
-        "body": "Si des clients ou des candidats vous posent des questions, vous pouvez dire : « En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, nous travaillons activement à une mise à jour de sécurité. Certaines applications sont donc temporairement indisponibles. »"
+        "body": "Si des clients ou des candidats vous demandent pourquoi les applications étaient hors ligne, vous pouvez dire : « En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, nous avons temporairement mis toutes les applications hors ligne pour effectuer une mise à jour de sécurité. La mise à jour est terminée et toutes les applications sont de nouveau disponibles. »"
       },
-      "contractInstructions": "Harry est de nouveau disponible dans tous les pays. Vérifiez vos plannings maintenant que Harry est de nouveau disponible."
+      "contractInstructions": "Toutes les applications sont de nouveau disponibles. Traitez les plannings reportés et vérifiez vos plannings dans Harry."
     }
   },
   "communicationAdvice": {
     "title": "Wat zeggen tegen klanten en kandidaten?",
-    "body": "Krijg je vragen van klanten of kandidaten? Dan kan je zeggen: “Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier zijn we druk bezig met een veiligheidsupdate. Daardoor zijn enkele applicaties tijdelijk niet beschikbaar.”"
+    "body": "Krijg je vragen van klanten of kandidaten over waarom de applicaties offline waren? Dan kan je zeggen: “Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier hebben we alle applicaties tijdelijk offline gehaald om een veiligheidsupdate uit te voeren. De update is afgerond en alle applicaties zijn weer beschikbaar.”"
   },
-  "contractInstructions": "Harry is opnieuw beschikbaar in alle landen. Controleer je planningen nu Harry weer beschikbaar is."
+  "contractInstructions": "Alle applicaties zijn weer beschikbaar. Verwerk de uitgestelde planningen en controleer je planningen in Harry."
 }
