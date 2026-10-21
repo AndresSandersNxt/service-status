@@ -1,6 +1,6 @@
 {
   "title": "Servicestatus",
-  "updatedAt": "2026-10-21T15:15:04+02:00",
+  "updatedAt": "2026-10-21T15:58:06+02:00",
   "incident": {
     "title": "Veiligheidsupdate: tijdelijke onderbreking vanaf 15.45 uur",
     "summary": "Er is wereldwijd een beveiligingsprobleem gemeld in software van een externe leverancier. Enkele applicaties zijn al uit voorzorg offline gehaald. De leverancier brengt vandaag een veiligheidsupdate uit. Om die meteen te installeren, zetten we op 21 oktober de meeste applicaties vanaf 15.45 uur tijdelijk offline. Sla je werk op en log uit vóór 15.45 uur. Maak alle beschikbare planningen en alle contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur. Buiten België is de impact nu al groter. Applicaties die in België nog beschikbaar zijn, zijn voor collega’s van AGO France en de Plus collega's momenteel niet toegankelijk.",
@@ -10,8 +10,7 @@
   "services": [
     {
       "name": "NxtForm",
-      "status": "offline",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline"
     },
     {
       "name": "NxtPlan mobiele app",
@@ -19,8 +18,7 @@
       "localizedNames": {
         "en": "NxtPlan mobile app",
         "fr": "Application mobile NxtPlan"
-      },
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      }
     },
     {
       "name": "GoTemp mobiele app",
@@ -28,8 +26,7 @@
       "localizedNames": {
         "en": "GoTemp mobile app",
         "fr": "Application mobile GoTemp"
-      },
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      }
     },
     {
       "name": "Let’s Work mobiele app",
@@ -37,13 +34,11 @@
       "localizedNames": {
         "en": "Let’s Work mobile app",
         "fr": "Application mobile Let’s Work"
-      },
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      }
     },
     {
       "name": "NxtJob",
-      "status": "offline",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline"
     },
     {
       "name": "AGO-website",
@@ -51,8 +46,7 @@
       "localizedNames": {
         "en": "AGO website",
         "fr": "Site web AGO"
-      },
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      }
     },
     {
       "name": "AGO-intranet",
@@ -60,54 +54,45 @@
       "localizedNames": {
         "en": "AGO intranet",
         "fr": "Intranet AGO"
-      },
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      }
     },
     {
       "name": "MyAgo",
-      "status": "offline",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline"
     },
     {
       "name": "AGO Insights",
-      "status": "offline",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline"
     },
     {
       "name": "NxtPlan",
-      "status": "operational",
-      "access": "belgium",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline",
+      "access": "belgium"
     },
     {
       "name": "NxtMatch",
-      "status": "operational",
-      "access": "belgium",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline",
+      "access": "belgium"
     },
     {
       "name": "NxtPay",
-      "status": "operational",
-      "access": "belgium",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline",
+      "access": "belgium"
     },
     {
       "name": "Salesbuddy",
-      "status": "operational",
-      "access": "belgium",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline",
+      "access": "belgium"
     },
     {
       "name": "Administratie project",
-      "status": "operational",
-      "access": "belgium",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline",
+      "access": "belgium"
     },
     {
       "name": "Harry",
-      "status": "operational",
-      "access": "belgium",
-      "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
+      "status": "offline",
+      "access": "belgium"
     },
     {
       "name": "Easypay",
@@ -161,6 +146,13 @@
   ],
   "assurance": "Alle Microsoft-applicaties (waaronder Outlook) blijven beschikbaar. Easypay blijft alleen in België beschikbaar.",
   "updates": [
+    {
+      "date": "2026-10-21",
+      "timestamp": "2026-10-21T15:58:06+02:00",
+      "label": "Statusupdate",
+      "title": "Alle applicaties offline behalve Microsoft en Easypay",
+      "body": "Alle applicaties zijn tijdelijk offline, behalve de Microsoft-applicaties (waaronder Outlook) en Easypay. Easypay blijft alleen in België beschikbaar. Toegang tot Easypay via VPN is niet mogelijk."
+    },
     {
       "date": "2026-10-21",
       "timestamp": "2026-10-21T15:15:04+02:00",
@@ -262,6 +254,13 @@
       ],
       "assurance": "All Microsoft applications (including Outlook) will remain available. Easypay remains available in Belgium only.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T15:58:06+02:00",
+          "label": "Status update",
+          "title": "All applications offline except Microsoft and Easypay",
+          "body": "All applications are temporarily offline except Microsoft applications (including Outlook) and Easypay. Easypay remains available in Belgium only. VPN access to Easypay is not possible."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T15:15:04+02:00",
@@ -368,6 +367,13 @@
       ],
       "assurance": "Toutes les applications Microsoft (dont Outlook) resteront disponibles. Easypay reste disponible uniquement en Belgique.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T15:58:06+02:00",
+          "label": "Mise à jour",
+          "title": "Toutes les applications hors ligne sauf Microsoft et Easypay",
+          "body": "Toutes les applications sont temporairement hors ligne, sauf les applications Microsoft (dont Outlook) et Easypay. Easypay reste disponible uniquement en Belgique. L’accès à Easypay via VPN n’est pas possible."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T15:15:04+02:00",
