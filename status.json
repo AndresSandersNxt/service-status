@@ -431,7 +431,7 @@
       ],
       "communicationAdvice": {
         "title": "What to tell customers and candidates",
-        "body": "If customers or candidates ask questions, you can say: “Due to a worldwide security issue at an external software supplier, we have temporarily taken some applications offline as a precaution.”"
+        "body": "If customers or candidates ask questions, you can say: “Due to a worldwide security issue at an external software supplier, we are working hard on a security update. As a result, some applications are temporarily unavailable.”"
       },
       "contractInstructions": "Harry is available again in all countries. Check your schedules now that Harry is available again."
     },
@@ -588,14 +588,14 @@
       ],
       "communicationAdvice": {
         "title": "Que dire aux clients et aux candidats ?",
-        "body": "Si des clients ou des candidats vous posent des questions, vous pouvez dire : « En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, nous avons temporairement mis certaines applications hors ligne par précaution. »"
+        "body": "Si des clients ou des candidats vous posent des questions, vous pouvez dire : « En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, nous travaillons activement à une mise à jour de sécurité. Certaines applications sont donc temporairement indisponibles. »"
       },
       "contractInstructions": "Harry est de nouveau disponible dans tous les pays. Vérifiez vos plannings maintenant que Harry est de nouveau disponible."
     }
   },
   "communicationAdvice": {
     "title": "Wat zeggen tegen klanten en kandidaten?",
-    "body": "Krijg je vragen van klanten of kandidaten? Dan kan je zeggen: “Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier hebben we enkele applicaties uit voorzorg tijdelijk offline gehaald.”"
+    "body": "Krijg je vragen van klanten of kandidaten? Dan kan je zeggen: “Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier zijn we druk bezig met een veiligheidsupdate. Daardoor zijn enkele applicaties tijdelijk niet beschikbaar.”"
   },
   "contractInstructions": "Harry is opnieuw beschikbaar in alle landen. Controleer je planningen nu Harry weer beschikbaar is."
 }
