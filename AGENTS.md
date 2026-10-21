@@ -26,6 +26,11 @@
 - Preserve both contributors' intended changes when resolving conflicts. Reconcile status updates, timestamps, and all three languages; do not blindly accept an entire side of `status.json`.
 - If an exceptional hotfix lands on `main`, promptly open a pull request from `main` back to `development` and merge it with a merge commit before starting further work.
 
+## Status updates
+
+- Keep the current incident notice unchanged until all applications are confirmed back online. This applies to every field in `incident` and its English and French translations, including the recovery expectation. Record intermediate recoveries in the service statuses, impact text and `updates`. Only revise the incident notice once full recovery is confirmed.
+- When the user confirms that an application is back online, this means it is available in all regions. Set its status to `operational`, remove any `access: "belgium"` restriction, and update the current impact text and recovery notice in all three languages. Do not carry forward a Belgium-only restriction for a restored application.
+
 ## Tekst MCP
 
 Use the Tekst MCP server only when the user explicitly asks to use Tekst in the current request. Do not invoke Tekst automatically based on task relevance, and do not access it in background work without an explicit user request.
