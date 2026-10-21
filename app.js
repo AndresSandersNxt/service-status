@@ -2,12 +2,12 @@ const $ = id => document.getElementById(id);
 const messages = {
   nl: {
     locale: 'nl-BE', title: 'Servicestatus', home: 'Servicestatus — startpagina', language: 'Taal',
-    description: 'De actuele beschikbaarheid van onze toepassingen, bekende verstoringen en updates over herstel.',
+    description: 'De actuele beschikbaarheid van onze applicaties, bekende verstoringen en updates over herstel.',
     skip: 'Naar de inhoud', publicPage: 'Publieke statuspagina', eyebrow: 'BESCHIKBAARHEID & UPDATES',
-    headingFirst: 'Hoe staan onze', headingSecond: 'toepassingen ervoor?',
+    headingFirst: 'Hoe staan onze', headingSecond: 'applicaties ervoor?',
     intro: 'Bekijk wat beschikbaar is, waar er een probleem is en wat we doen om het op te lossen.',
     refresh: 'Vernieuwen', currentIncident: 'Actuele melding', recovery: 'Verwacht herstel', overview: 'OVERZICHT',
-    services: 'Status per toepassing', manual: 'Handmatig bijgewerkt', impact: 'Wat betekent dit voor jou?',
+    services: 'Status per applicatie', manual: 'Handmatig bijgewerkt', impact: 'Wat betekent dit voor jou?',
     unavailable: 'Impact', belgiumOnly: 'Alleen in België beschikbaar', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
     maintenanceOffline: time => `Tijdelijk offline voor onderhoud vanaf ${time}`,
     footer: 'Een helder overzicht. Bijgewerkt zodra er nieuwe informatie is.', timezone: 'Alle tijden zijn Belgische tijd.',
