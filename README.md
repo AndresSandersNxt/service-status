@@ -45,6 +45,8 @@ Het veld `date` bij updates blijft behouden voor bezoekers met een eerder geopen
 
 Toegestane statussen: `offline` (tijdelijk offline), `operational` (beschikbaar), `degraded` (beperkt beschikbaar), `unknown` (nog niet bevestigd).
 
+Zet het gedeelde veld `updateInProgress` op `true` wanneer de veiligheidsupdate daadwerkelijk in uitvoering is. Dit toont een geanimeerde melding boven de actuele melding, in de gekozen taal. Zet het op `false` (of verwijder het) zodra de update is afgerond. De animatie toont activiteit, geen gemeten voortgang of hersteltijd, en verandert de dienststatussen niet. Bij een voorkeur voor minder beweging staat de animatie automatisch stil.
+
 Voeg bij diensten die alleen in België beschikbaar zijn `"access": "belgium"` toe. Bij de status `operational` toont de pagina **Alleen in België beschikbaar**, met de bijbehorende Engelse en Franse vertaling. Toegang via VPN is niet mogelijk. Verwijder `access` zodra de geografische beperking is opgeheven.
 
 Voeg bij elke applicatie met gepland onderhoud `"maintenanceStartsAt": "2026-10-21T15:45:00+02:00"` toe, met het juiste tijdstip en de juiste tijdzone. De tabel toont de huidige beschikbaarheid en daaronder wanneer de applicatie offline gaat voor onderhoud. Bij applicaties die al offline zijn, wordt geen onderhoudsmelding getoond. Alle tijden worden in Belgische tijd getoond. Laat dit veld weg bij applicaties zonder gepland onderhoud. Werk bij de start van het onderhoud de status handmatig bij naar `offline` en verwijder `maintenanceStartsAt`; bevestig herstel voordat je de status weer op `operational` zet.
