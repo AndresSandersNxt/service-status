@@ -1,7 +1,7 @@
 {
   "updateInProgress": true,
   "title": "Servicestatus",
-  "updatedAt": "2026-10-21T15:58:06+02:00",
+  "updatedAt": "2026-10-21T17:01:46+02:00",
   "incident": {
     "title": "Veiligheidsupdate: tijdelijke onderbreking vanaf 15.45 uur",
     "summary": "Er is wereldwijd een beveiligingsprobleem gemeld in software van een externe leverancier. Enkele applicaties zijn al uit voorzorg offline gehaald. De leverancier brengt vandaag een veiligheidsupdate uit. Om die meteen te installeren, zetten we op 21 oktober de meeste applicaties vanaf 15.45 uur tijdelijk offline. Sla je werk op en log uit vóór 15.45 uur. Maak alle beschikbare planningen en alle contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur. Buiten België is de impact nu al groter. Applicaties die in België nog beschikbaar zijn, zijn voor collega’s van AGO France en de Plus collega's momenteel niet toegankelijk.",
@@ -149,6 +149,13 @@
   "updates": [
     {
       "date": "2026-10-21",
+      "timestamp": "2026-10-21T17:01:46+02:00",
+      "label": "Statusupdate",
+      "title": "Herstel duurt langer dan verwacht",
+      "body": "Heel veel bedrijven moeten deze veiligheidsupdate uitvoeren. Daardoor hebben onze cloudproviders meer werk dan gewoonlijk. Het duurt langer dan verwacht voordat al onze diensten weer beschikbaar zijn. Bedankt voor jullie geduld."
+    },
+    {
+      "date": "2026-10-21",
       "timestamp": "2026-10-21T15:58:06+02:00",
       "label": "Statusupdate",
       "title": "Alle applicaties offline behalve Microsoft en Easypay",
@@ -255,6 +262,13 @@
       ],
       "assurance": "All Microsoft applications (including Outlook) will remain available. Easypay remains available in Belgium only.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T17:01:46+02:00",
+          "label": "Status update",
+          "title": "Restoring services is taking longer than expected",
+          "body": "A large number of companies need to carry out this security update. As a result, our cloud providers have more work than usual. It is taking longer than expected for all our services to become available again. Thank you for your patience."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T15:58:06+02:00",
@@ -368,6 +382,13 @@
       ],
       "assurance": "Toutes les applications Microsoft (dont Outlook) resteront disponibles. Easypay reste disponible uniquement en Belgique.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T17:01:46+02:00",
+          "label": "Mise à jour",
+          "title": "Le rétablissement des services prend plus de temps que prévu",
+          "body": "Un très grand nombre d’entreprises doivent effectuer cette mise à jour de sécurité. Nos fournisseurs cloud ont donc plus de travail que d’habitude. Le rétablissement de l’ensemble de nos services prend plus de temps que prévu. Merci pour votre patience."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T15:58:06+02:00",
