@@ -303,7 +303,7 @@
         "expectation": "Recovery of the remaining services is taking longer than expected. No new recovery time has been confirmed. We will let you know as more applications come back online. Follow this page for updates."
       },
       "unavailable": [
-        "Already offline for everyone: the NxtPlan, GoTemp and Let’s Work mobile apps, the GoTemp website, the website of The People Panel, MyAgo and AGO Insights. This prevents activities including tracking time or submitting availability via the mobile apps.",
+        "Already offline for everyone: the NxtPlan, GoTemp and Let’s Work mobile apps, NxtJob, the GoTemp website, the website of The People Panel, MyAgo and AGO Insights. This prevents activities including tracking time or submitting availability via the mobile apps.",
         "NxtPlan, Salesbuddy, Administratie project and the Let’s Work website are still temporarily offline for the security update. Harry and NxtPay are available again for everyone, in all countries. NxtAdmin is available again. All Microsoft applications remain available. Easypay remains available in Belgium only.",
         "Greater impact outside Belgium: NxtPlan, Salesbuddy, Administratie project and Easypay are still inaccessible there, even via VPN. The Belgium-only restriction in the overview applies to these services. Harry and NxtPay are available again for everyone, including colleagues at AGO France and Plus.",
         "Process schedules received after 15:30 once the applications are back online."
