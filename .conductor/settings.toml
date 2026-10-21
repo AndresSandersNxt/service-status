@@ -1,0 +1,10 @@
+"$schema" = "https://conductor.build/schemas/settings.repo.schema.json"
+
+[scripts]
+run_mode = "concurrent"
+
+[scripts.run.dev]
+available_in = ["local"]
+command = 'python3 -m http.server "$CONDUCTOR_PORT" --bind 127.0.0.1'
+default = true
+icon = "play"

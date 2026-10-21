@@ -28,6 +28,8 @@ Maak deze repository publiek. Kies bij **Settings → Pages → Build and deploy
 
 Voer `python3 -m http.server 8080` uit in deze map en open `http://localhost:8080`. Controleer de gegevens met `node validate.mjs`.
 
+In Conductor start de **Run**-knop dezelfde server op de toegewezen `CONDUCTOR_PORT`, zodat meerdere werkruimtes tegelijk kunnen draaien. De gedeelde configuratie staat in `.conductor/settings.toml` en wordt door Conductor gebruikt zodra die op de standaardbranch is samengevoegd.
+
 ## Redactioneel
 
 De eerste melding is overgenomen uit het aangeleverde bericht en gedateerd op 21 oktober 2026. De tijden van 16.00 en 17.00 uur zijn verwachtingen, geen bevestigde hersteltijden. Publiceer uitsluitend bevestigde informatie en pas verstreken verwachtingen aan zodra nieuwe informatie beschikbaar is. Alle bestanden en de volledige wijzigingsgeschiedenis van deze publieke repository zijn openbaar.
