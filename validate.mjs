@@ -25,7 +25,7 @@ assert.ok(Array.isArray(data.services));
 for (const service of data.services) {
   text(service.name);
   assert.ok(['offline', 'operational', 'degraded', 'unknown'].includes(service.status), 'Onbekende dienststatus');
-  if (service.access !== undefined) assert.equal(service.access, 'belgium', 'Onbekende toegangsbeperking');
+  if (service.access !== undefined) assert.ok(['belgium', 'vpn'].includes(service.access), 'Onbekende toegangsbeperking');
   if (service.maintenanceStartsAt !== undefined) {
     text(service.maintenanceStartsAt);
     assert.match(service.maintenanceStartsAt, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/, 'Gepland onderhoud moet een tijdstip met tijdzone bevatten');

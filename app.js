@@ -10,7 +10,7 @@ const messages = {
     progressLabel: 'VEILIGHEIDSUPDATE', progressTitle: 'De update is in uitvoering.',
     progressBody: 'We werken aan het veilig opnieuw beschikbaar maken van de applicaties. Zodra er nieuws is, lees je het hier.',
     services: 'Status per applicatie', manual: 'Handmatig bijgewerkt', restored: 'Opnieuw beschikbaar',
-    belgiumOnly: 'Alleen in België beschikbaar', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
+    belgiumOnly: 'Alleen in België beschikbaar', vpnOnly: 'Alleen via VPN beschikbaar', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
     maintenanceOffline: time => `Tijdelijk offline voor onderhoud vanaf ${time}`,
     footer: 'Een helder overzicht. Bijgewerkt zodra er nieuwe informatie is.', timezone: 'Alle tijden zijn Belgische tijd.',
     loading: 'Statusinformatie wordt geladen…', updated: (date, time) => `Laatst bijgewerkt op ${date} om ${time}`,
@@ -29,7 +29,7 @@ const messages = {
     progressLabel: 'SECURITY UPDATE', progressTitle: 'The update is in progress.',
     progressBody: 'We’re working to bring the applications back online safely. As soon as there’s news, you’ll find it here.',
     services: 'Status by application', manual: 'Manually updated', restored: 'Available again',
-    belgiumOnly: 'Available in Belgium only', latest: 'LATEST INFORMATION', updates: 'Updates',
+    belgiumOnly: 'Available in Belgium only', vpnOnly: 'Available via VPN only', latest: 'LATEST INFORMATION', updates: 'Updates',
     maintenanceOffline: time => `Temporarily offline for maintenance from ${time}`,
     footer: 'A clear overview. Updated as soon as new information is available.', timezone: 'All times are Belgian time.',
     loading: 'Loading status information…', updated: (date, time) => `Last updated on ${date} at ${time}`,
@@ -48,7 +48,7 @@ const messages = {
     progressLabel: 'MISE À JOUR DE SÉCURITÉ', progressTitle: 'La mise à jour est en cours.',
     progressBody: 'Nous travaillons à remettre les applications en ligne en toute sécurité. Dès qu’il y aura du nouveau, vous le lirez ici.',
     services: 'État par application', manual: 'Mise à jour manuelle', restored: 'De nouveau disponibles',
-    belgiumOnly: 'Disponible en Belgique uniquement', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
+    belgiumOnly: 'Disponible en Belgique uniquement', vpnOnly: 'Disponible uniquement via VPN', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
     maintenanceOffline: time => `Temporairement hors ligne pour maintenance à partir de ${time}`,
     footer: 'Une vue d’ensemble claire. Mise à jour dès que de nouvelles informations sont disponibles.', timezone: 'Toutes les heures sont indiquées à l’heure belge.',
     loading: 'Chargement des informations de statut…', updated: (date, time) => `Dernière mise à jour le ${date} à ${time}`,
@@ -106,7 +106,8 @@ function render() {
     const row = element('div', 'service-row');
     const details = element('div', 'service-status');
     const badge = element('span', `badge status-${status}`);
-    const statusLabel = status === 'operational' && service.access === 'belgium' ? copy.belgiumOnly : copy.statuses[status];
+    const accessLabel = { belgium: copy.belgiumOnly, vpn: copy.vpnOnly }[service.access];
+    const statusLabel = status === 'operational' && accessLabel ? accessLabel : copy.statuses[status];
     badge.append(element('span', 'dot'), document.createTextNode(statusLabel));
     details.append(badge);
     if (service.maintenanceStartsAt && status !== 'offline') {
