@@ -1,0 +1,24 @@
+{
+  "title": "Servicestatus",
+  "updatedAt": "2026-10-21T10:23:00+02:00",
+  "incident": {
+    "title": "Enkele toepassingen tijdelijk offline",
+    "summary": "Vanwege een wereldwijd gemeld beveiligingsprobleem in software van een externe leverancier hebben we enkele toepassingen uit voorzorg tijdelijk offline gehaald.",
+    "phase": "In behandeling",
+    "expectation": "De leverancier verwacht op 21 oktober rond 16.00 uur een oplossing beschikbaar te stellen. Zodra die beschikbaar is, installeren en testen we die meteen. We verwachten de toepassingen rond 17.00 uur opnieuw beschikbaar te hebben, als de installatie en de tests goed verlopen. Dit is een verwachting, geen bevestigde hersteltijd."
+  },
+  "services": [
+    {"name": "NxtForm", "status": "offline"},
+    {"name": "NxtPlan app", "status": "offline"},
+    {"name": "GoTemp app", "status": "offline"},
+    {"name": "Let’s Work app", "status": "offline"},
+    {"name": "NxtJob", "status": "offline"},
+    {"name": "AGO-website", "status": "offline"}
+  ],
+  "unavailable": ["Journeys invullen", "Tijdsregistratie via de NxtPlan app", "Beschikbaarheden doorgeven via de app", "Solliciteren via de AGO-website"],
+  "available": ["Matching", "Kandidaten bellen en voorstellen", "Planningen maken", "Contracten maken"],
+  "assurance": "Er is geen impact op verloning en facturatie.",
+  "updates": [
+    {"date": "2026-10-21", "label": "Eerste melding", "title": "Toepassingen uit voorzorg offline gehaald", "body": "NxtForm, de NxtPlan app, de GoTemp app, de Let’s Work app, NxtJob en de AGO-website zijn tijdelijk offline gehaald vanwege een beveiligingsprobleem bij een externe softwareleverancier. Zodra er bevestigde nieuwe informatie is, werken we deze pagina bij."}
+  ]
+}
