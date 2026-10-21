@@ -1,9 +1,9 @@
 {
   "title": "Servicestatus",
-  "updatedAt": "2026-10-21T13:28:42+02:00",
+  "updatedAt": "2026-10-21T14:09:46+02:00",
   "incident": {
     "title": "Veiligheidsupdate: tijdelijke onderbreking vanaf 15.45 uur",
-    "summary": "Er is wereldwijd een beveiligingsprobleem gemeld in software van een externe leverancier. Enkele toepassingen zijn al uit voorzorg offline gehaald. De leverancier brengt vandaag een veiligheidsupdate uit. Om die meteen te installeren, zetten we op 21 oktober de meeste toepassingen vanaf 15.45 uur tijdelijk offline. Sla je werk op en log uit vóór 15.45 uur. Maak alle beschikbare planningen en alle contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur.",
+    "summary": "Er is wereldwijd een beveiligingsprobleem gemeld in software van een externe leverancier. Enkele toepassingen zijn al uit voorzorg offline gehaald. De leverancier brengt vandaag een veiligheidsupdate uit. Om die meteen te installeren, zetten we op 21 oktober de meeste toepassingen vanaf 15.45 uur tijdelijk offline. Sla je werk op en log uit vóór 15.45 uur. Maak alle beschikbare planningen en alle contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur. Buiten België is de impact nu al groter. Toepassingen die in België nog beschikbaar zijn, zijn voor collega’s van AGO France en de Plus collega's momenteel niet toegankelijk.",
     "phase": "Onderbreking gepland vanaf 15.45 uur",
     "expectation": "Voor NxtMatch, NxtPlan en NxtPay verwachten we vanaf 15.45 uur maximaal 1 uur onderbreking, voor iedereen. Harry is vanaf 15.45 uur ook in de kantoren niet beschikbaar; dit kan langer dan 1 uur duren. We laten weten zodra alles weer online is. Volg deze pagina voor updates."
   },
@@ -76,43 +76,43 @@
     {
       "name": "NxtPlan",
       "status": "operational",
-      "access": "vpn",
+      "access": "belgium",
       "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
     },
     {
       "name": "NxtMatch",
       "status": "operational",
-      "access": "vpn",
+      "access": "belgium",
       "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
     },
     {
       "name": "NxtPay",
       "status": "operational",
-      "access": "vpn",
+      "access": "belgium",
       "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
     },
     {
       "name": "Salesbuddy",
       "status": "operational",
-      "access": "vpn",
+      "access": "belgium",
       "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
     },
     {
       "name": "Administratie project",
       "status": "operational",
-      "access": "vpn",
+      "access": "belgium",
       "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
     },
     {
       "name": "Harry",
       "status": "operational",
-      "access": "vpn",
+      "access": "belgium",
       "maintenanceStartsAt": "2026-10-21T15:45:00+02:00"
     },
     {
       "name": "Easypay",
       "status": "operational",
-      "access": "vpn"
+      "access": "belgium"
     },
     {
       "name": "Let’s Work-website",
@@ -132,31 +132,39 @@
     }
   ],
   "unavailable": [
-    "Nu al niet mogelijk: journeys invullen, tijdsregistratie en beschikbaarheden doorgeven via de mobiele apps, solliciteren via de AGO-website, het AGO-intranet raadplegen en MyAgo en AGO Insights gebruiken.",
-    "Vanaf 15.45 uur: de meeste toepassingen tijdelijk offline voor de veiligheidsupdate, ook NxtMatch, NxtPlan en NxtPay voor iedereen en Harry in de kantoren. Alle Microsoft-toepassingen, de Let’s Work-website en Easypay blijven beschikbaar.",
+    "Nu al offline voor iedereen: NxtForm, de mobiele apps van NxtPlan, GoTemp en Let’s Work, NxtJob, de AGO-website, het AGO-intranet, MyAgo en AGO Insights. Daardoor kun je onder meer geen journeys invullen, tijd registreren of beschikbaarheden doorgeven via de mobiele apps, niet solliciteren via de AGO-website en het AGO-intranet niet raadplegen.",
+    "Vanaf 15.45 uur: de meeste toepassingen tijdelijk offline voor de veiligheidsupdate, ook NxtMatch, NxtPlan en NxtPay voor iedereen en Harry in de kantoren. Alle Microsoft-toepassingen en de Let’s Work-website blijven beschikbaar. Easypay blijft alleen in België beschikbaar.",
+    "Grotere impact buiten België: NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry en Easypay zijn daar ook niet toegankelijk, zelfs niet via VPN. Plus collega's en collega’s van AGO France hebben momenteel geen toegang tot de getroffen toepassingen. De beschikbaarheid in het overzicht geldt alleen in België. Toegang via VPN is niet mogelijk.",
     "Planningen die na 15.30 uur binnenkomen, verwerk je zodra de toepassingen weer online zijn."
   ],
   "available": [
     "Alle Microsoft-toepassingen, waaronder Outlook, blijven beschikbaar",
     "De Let’s Work-website blijft beschikbaar",
-    "Easypay blijft beschikbaar via VPN",
+    "Easypay blijft alleen in België beschikbaar",
     "Maak alle beschikbare planningen en contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur"
   ],
-  "assurance": "Alle Microsoft-toepassingen (waaronder Outlook), de Let’s Work-website en Easypay blijven beschikbaar. Easypay is uitsluitend bereikbaar via VPN.",
+  "assurance": "Alle Microsoft-toepassingen (waaronder Outlook) en de Let’s Work-website blijven beschikbaar. Easypay blijft alleen in België beschikbaar.",
   "updates": [
+    {
+      "date": "2026-10-21",
+      "timestamp": "2026-10-21T14:02:41+02:00",
+      "label": "Statusupdate",
+      "title": "Toepassingen offline; grotere impact buiten België",
+      "body": "Nu al offline voor iedereen: NxtForm, de mobiele apps van NxtPlan, GoTemp en Let’s Work, NxtJob, de AGO-website, het AGO-intranet, MyAgo en AGO Insights. Daardoor kun je onder meer geen journeys invullen, tijd registreren of beschikbaarheden doorgeven via de mobiele apps, niet solliciteren via de AGO-website en het AGO-intranet niet raadplegen. Vanaf 15.45 uur op 21 oktober gaan de meeste toepassingen tijdelijk offline voor een veiligheidsupdate. Sla je werk op en log uit vóór 15.45 uur; maak de beschikbare planningen en contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur. Grotere impact buiten België: NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry en Easypay zijn daar ook niet toegankelijk, zelfs niet via VPN. Plus collega's en collega’s van AGO France hebben momenteel geen toegang tot de getroffen toepassingen. De beschikbaarheid in het overzicht geldt alleen in België. Toegang via VPN is niet mogelijk."
+    },
     {
       "date": "2026-10-21",
       "timestamp": "2026-10-21T13:17:26+02:00",
       "label": "Statusupdate",
       "title": "Aanvullende dienststatussen en uitzonderingen op de onderbreking",
-      "body": "MyAgo en AGO Insights zijn offline. De Let’s Work-website is online. Alle Microsoft-toepassingen (waaronder Outlook), de Let’s Work-website en Easypay blijven beschikbaar tijdens de geplande onderbreking vanaf 15.45 uur. Easypay is uitsluitend bereikbaar via VPN."
+      "body": "MyAgo en AGO Insights zijn offline. De Let’s Work-website is online. Alle Microsoft-toepassingen (waaronder Outlook) en de Let’s Work-website blijven beschikbaar; Easypay blijft alleen in België beschikbaar tijdens de geplande onderbreking vanaf 15.45 uur. Easypay is alleen in België beschikbaar. Toegang via VPN is niet mogelijk."
     },
     {
       "date": "2026-10-21",
       "timestamp": "2026-10-21T12:53:44+02:00",
       "label": "Statusupdate",
       "title": "Geplande veiligheidsupdate vanaf 15.45 uur",
-      "body": "Op 21 oktober zetten we de meeste toepassingen vanaf 15.45 uur uit voorzorg tijdelijk offline om de veiligheidsupdate van de externe leverancier meteen te installeren. Sla je werk op en log uit vóór 15.45 uur. We laten weten zodra alles weer online is. Alle Microsoft-toepassingen, de Let’s Work-website en Easypay blijven beschikbaar."
+      "body": "Op 21 oktober zetten we de meeste toepassingen vanaf 15.45 uur uit voorzorg tijdelijk offline om de veiligheidsupdate van de externe leverancier meteen te installeren. Sla je werk op en log uit vóór 15.45 uur. We laten weten zodra alles weer online is. Alle Microsoft-toepassingen en de Let’s Work-website blijven beschikbaar. Easypay blijft alleen in België beschikbaar."
     },
     {
       "date": "2026-10-21",
@@ -170,21 +178,21 @@
       "timestamp": "2026-10-21T12:53:44+02:00",
       "label": "Statusupdate",
       "title": "Harry: contracten vóór 15.30 uur en hulp via buddy@ago.jobs",
-      "body": "Harry is vanaf 15.45 uur ook in de kantoren niet beschikbaar. Dit kan langer duren dan 1 uur. Maak alle contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur. Outlook blijft beschikbaar. Stuur contractaanvragen die na 15.30 uur per mail of telefonisch binnenkomen naar buddy@ago.jobs, met alle nodige gegevens. Zij zorgen voor de tijdige Dimona-aangifte. Controleer je planningen zodra Harry weer beschikbaar is."
+      "body": "Harry is vanaf 15.45 uur ook in de kantoren niet beschikbaar. Dit kan langer duren dan 1 uur. Maak alle contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur. Outlook blijft beschikbaar. Voor Harry-contracten na 15.30 uur mail je alle nodige gegevens naar buddy@ago.jobs. Zij zorgen voor de tijdige Dimona-aangifte. Controleer je planningen zodra Harry weer beschikbaar is."
     },
     {
       "date": "2026-10-21",
       "timestamp": "2026-10-21T11:11:32+02:00",
       "label": "Statusupdate",
-      "title": "Easypay beschikbaar via VPN",
-      "body": "Easypay is online en uitsluitend bereikbaar via VPN."
+      "title": "Easypay alleen in België beschikbaar",
+      "body": "Easypay is alleen in België beschikbaar. Toegang via VPN is niet mogelijk."
     },
     {
       "date": "2026-10-21",
       "timestamp": "2026-10-21T11:11:32+02:00",
       "label": "Statusupdate",
-      "title": "Offline toepassingen en toegang via VPN",
-      "body": "NxtForm, de mobiele apps van NxtPlan, GoTemp en Let’s Work, NxtJob, de AGO-website en het AGO-intranet zijn offline. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project en Harry zijn online, maar uitsluitend bereikbaar via VPN."
+      "title": "Offline toepassingen en beschikbaarheid in België",
+      "body": "NxtForm, de mobiele apps van NxtPlan, GoTemp en Let’s Work, NxtJob, de AGO-website en het AGO-intranet zijn offline. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project en Harry zijn alleen in België beschikbaar. Toegang via VPN is niet mogelijk."
     },
     {
       "date": "2026-10-21",
@@ -199,36 +207,44 @@
       "title": "Service status",
       "incident": {
         "title": "Security update: temporary interruption from 15:45",
-        "summary": "A worldwide security issue has been reported in software from an external supplier. Some applications have already been taken offline as a precaution. The supplier is releasing a security update today. To install it immediately, we will temporarily take most applications offline from 15:45 on 21 October. Save your work and log out before 15:45. Create all available schedules and all contracts for starts this evening, tonight and tomorrow morning before 15:30.",
+        "summary": "A worldwide security issue has been reported in software from an external supplier. Some applications have already been taken offline as a precaution. The supplier is releasing a security update today. To install it immediately, we will temporarily take most applications offline from 15:45 on 21 October. Save your work and log out before 15:45. Create all available schedules and all contracts for starts this evening, tonight and tomorrow morning before 15:30. The impact outside Belgium is already greater. Applications that remain available in Belgium are currently inaccessible to colleagues at AGO France and Plus colleagues.",
         "phase": "Interruption scheduled from 15:45",
         "expectation": "For NxtMatch, NxtPlan and NxtPay, we expect an interruption of no more than 1 hour from 15:45, for everyone. Harry will also be unavailable in the offices from 15:45; this may last longer than 1 hour. We will let you know once everything is back online. Follow this page for updates."
       },
       "unavailable": [
-        "Already unavailable: completing journeys, time tracking and submitting availability via the mobile apps, applying for jobs via the AGO website, accessing the AGO intranet and using MyAgo and AGO Insights.",
-        "From 15:45: most applications temporarily offline for the security update, including NxtMatch, NxtPlan and NxtPay for everyone, and Harry in the offices. All Microsoft applications, the Let’s Work website and Easypay will remain available.",
+        "Already offline for everyone: NxtForm, the NxtPlan, GoTemp and Let’s Work mobile apps, NxtJob, the AGO website, the AGO intranet, MyAgo and AGO Insights. This prevents activities including completing journeys, tracking time or submitting availability via the mobile apps, applying for jobs via the AGO website and accessing the AGO intranet.",
+        "From 15:45: most applications temporarily offline for the security update, including NxtMatch, NxtPlan and NxtPay for everyone, and Harry in the offices. All Microsoft applications and the Let’s Work website will remain available. Easypay remains available in Belgium only.",
+        "Greater impact outside Belgium: NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry and Easypay are also inaccessible there, even via VPN. Plus colleagues and colleagues at AGO France currently cannot access the affected applications. Availability in the overview applies to Belgium only. VPN access is not possible.",
         "Process schedules received after 15:30 once the applications are back online."
       ],
       "available": [
         "All Microsoft applications, including Outlook, remain available",
         "The Let’s Work website remains available",
-        "Easypay remains available via VPN",
+        "Easypay remains available in Belgium only",
         "Create all available schedules and contracts for starts this evening, tonight and tomorrow morning before 15:30"
       ],
-      "assurance": "All Microsoft applications (including Outlook), the Let’s Work website and Easypay will remain available. Easypay can only be accessed via VPN.",
+      "assurance": "All Microsoft applications (including Outlook) and the Let’s Work website will remain available. Easypay remains available in Belgium only.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T14:02:41+02:00",
+          "label": "Status update",
+          "title": "Applications offline; greater impact outside Belgium",
+          "body": "Already offline for everyone: NxtForm, the NxtPlan, GoTemp and Let’s Work mobile apps, NxtJob, the AGO website, the AGO intranet, MyAgo and AGO Insights. This prevents activities including completing journeys, tracking time or submitting availability via the mobile apps, applying for jobs via the AGO website and accessing the AGO intranet. From 15:45 on 21 October, most applications will temporarily go offline for a security update. Save your work and log out before 15:45; create available schedules and contracts for starts this evening, tonight and tomorrow morning before 15:30. Greater impact outside Belgium: NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry and Easypay are also inaccessible there, even via VPN. Plus colleagues and colleagues at AGO France currently cannot access the affected applications. Availability in the overview applies to Belgium only. VPN access is not possible."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T13:17:26+02:00",
           "label": "Status update",
           "title": "Additional service statuses and exceptions to the interruption",
-          "body": "MyAgo and AGO Insights are offline. The Let’s Work website is online. All Microsoft applications (including Outlook), the Let’s Work website and Easypay will remain available during the scheduled interruption from 15:45. Easypay can only be accessed via VPN."
+          "body": "MyAgo and AGO Insights are offline. The Let’s Work website is online. All Microsoft applications (including Outlook) and the Let’s Work website will remain available; Easypay will remain available in Belgium only during the scheduled interruption from 15:45. Easypay is available in Belgium only. VPN access is not possible."
         },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T12:53:44+02:00",
           "label": "Status update",
           "title": "Security update scheduled from 15:45",
-          "body": "On 21 October, we will temporarily take most applications offline from 15:45 as a precaution to install the external supplier’s security update immediately. Save your work and log out before 15:45. We will let you know once everything is back online. All Microsoft applications, the Let’s Work website and Easypay will remain available."
+          "body": "On 21 October, we will temporarily take most applications offline from 15:45 as a precaution to install the external supplier’s security update immediately. Save your work and log out before 15:45. We will let you know once everything is back online. All Microsoft applications and the Let’s Work website will remain available. Easypay will remain available in Belgium only."
         },
         {
           "date": "2026-10-21",
@@ -242,21 +258,21 @@
           "timestamp": "2026-10-21T12:53:44+02:00",
           "label": "Status update",
           "title": "Harry: contracts before 15:30 and help via buddy@ago.jobs",
-          "body": "Harry will also be unavailable in the offices from 15:45. This may last longer than 1 hour. Create all contracts for starts this evening, tonight and tomorrow morning before 15:30. Outlook remains available. Send contract requests received by email or phone after 15:30 to buddy@ago.jobs, with all necessary details. The team will ensure the Dimona declaration is submitted on time. Check your schedules once Harry is available again."
+          "body": "Harry will also be unavailable in the offices from 15:45. This may last longer than 1 hour. Create all contracts for starts this evening, tonight and tomorrow morning before 15:30. Outlook remains available. For Harry contracts after 15:30, email all necessary details to buddy@ago.jobs. They will ensure the Dimona declaration is submitted on time. Check your schedules once Harry is available again."
         },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T11:11:32+02:00",
           "label": "Status update",
-          "title": "Easypay available via VPN",
-          "body": "Easypay is online and can only be accessed via VPN."
+          "title": "Easypay available in Belgium only",
+          "body": "Easypay is available in Belgium only. VPN access is not possible."
         },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T11:11:32+02:00",
           "label": "Status update",
-          "title": "Offline applications and VPN access",
-          "body": "NxtForm, the NxtPlan, GoTemp and Let’s Work mobile apps, NxtJob, the AGO website and the AGO intranet are offline. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project and Harry are online, but can only be accessed via VPN."
+          "title": "Offline applications and availability in Belgium",
+          "body": "NxtForm, the NxtPlan, GoTemp and Let’s Work mobile apps, NxtJob, the AGO website and the AGO intranet are offline. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project and Harry are available in Belgium only. VPN access is not possible."
         },
         {
           "date": "2026-10-21",
@@ -270,42 +286,50 @@
         "title": "What to tell customers and candidates",
         "body": "If customers or candidates ask questions, you can say: “Due to a worldwide security issue at an external software supplier, we have temporarily taken some applications offline as a precaution. We expect them to be available again at around 17:00.”"
       },
-      "contractInstructions": "Send contract requests received by email or phone after 15:30 to buddy@ago.jobs, with all necessary details. The team will ensure the Dimona declaration is submitted on time. Check your schedules once Harry is available again."
+      "contractInstructions": "For Harry contracts after 15:30, email all necessary details to buddy@ago.jobs. They will ensure the Dimona declaration is submitted on time. Check your schedules once Harry is available again."
     },
     "fr": {
       "title": "État des services",
       "incident": {
         "title": "Mise à jour de sécurité : interruption temporaire à partir de 15h45",
-        "summary": "Un problème de sécurité a été signalé au niveau mondial dans un logiciel d’un fournisseur externe. Certaines applications ont déjà été mises hors ligne par précaution. Le fournisseur publie aujourd’hui une mise à jour de sécurité. Pour l’installer immédiatement, nous mettrons temporairement la plupart des applications hors ligne le 21 octobre à partir de 15h45. Enregistrez votre travail et déconnectez-vous avant 15h45. Créez avant 15h30 tous les plannings disponibles et tous les contrats pour les démarrages de ce soir, de cette nuit et de demain matin.",
+        "summary": "Un problème de sécurité a été signalé au niveau mondial dans un logiciel d’un fournisseur externe. Certaines applications ont déjà été mises hors ligne par précaution. Le fournisseur publie aujourd’hui une mise à jour de sécurité. Pour l’installer immédiatement, nous mettrons temporairement la plupart des applications hors ligne le 21 octobre à partir de 15h45. Enregistrez votre travail et déconnectez-vous avant 15h45. Créez avant 15h30 tous les plannings disponibles et tous les contrats pour les démarrages de ce soir, de cette nuit et de demain matin. L’impact hors de Belgique est déjà plus important. Les applications encore disponibles en Belgique sont actuellement inaccessibles aux collègues d’AGO France et aux collègues Plus.",
         "phase": "Interruption prévue à partir de 15h45",
         "expectation": "Pour NxtMatch, NxtPlan et NxtPay, nous prévoyons une interruption d’1 heure maximum à partir de 15h45, pour tout le monde. Harry sera également indisponible dans les agences à partir de 15h45 ; cela peut durer plus d’1 heure. Nous vous informerons dès que tout sera de nouveau en ligne. Suivez cette page pour les mises à jour."
       },
       "unavailable": [
-        "Déjà indisponibles : compléter les parcours, enregistrer les heures et communiquer ses disponibilités via les applications mobiles, postuler via le site web AGO, consulter l’intranet AGO et utiliser MyAgo et AGO Insights.",
-        "À partir de 15h45 : la plupart des applications seront temporairement hors ligne pour la mise à jour de sécurité, y compris NxtMatch, NxtPlan et NxtPay pour tout le monde, ainsi que Harry dans les agences. Toutes les applications Microsoft, le site web Let’s Work et Easypay resteront disponibles.",
+        "Déjà hors ligne pour tout le monde : NxtForm, les applications mobiles NxtPlan, GoTemp et Let’s Work, NxtJob, le site web AGO, l’intranet AGO, MyAgo et AGO Insights. Cela empêche notamment de compléter les parcours, d’enregistrer les heures ou de communiquer ses disponibilités via les applications mobiles, de postuler via le site web AGO et de consulter l’intranet AGO.",
+        "À partir de 15h45 : la plupart des applications seront temporairement hors ligne pour la mise à jour de sécurité, y compris NxtMatch, NxtPlan et NxtPay pour tout le monde, ainsi que Harry dans les agences. Toutes les applications Microsoft et le site web Let’s Work resteront disponibles. Easypay reste disponible uniquement en Belgique.",
+        "Impact plus important hors de Belgique : NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry et Easypay y sont également inaccessibles, même via VPN. Les collègues Plus et les collègues d’AGO France n’ont actuellement pas accès aux applications concernées. La disponibilité indiquée dans le tableau s’applique uniquement à la Belgique. L’accès via VPN n’est pas possible.",
         "Traitez les plannings reçus après 15h30 dès que les applications seront de nouveau en ligne."
       ],
       "available": [
         "Toutes les applications Microsoft, dont Outlook, restent disponibles",
         "Le site web Let’s Work reste disponible",
-        "Easypay reste disponible via VPN",
+        "Easypay reste disponible uniquement en Belgique",
         "Créez avant 15h30 tous les plannings disponibles et tous les contrats pour les démarrages de ce soir, de cette nuit et de demain matin"
       ],
-      "assurance": "Toutes les applications Microsoft (dont Outlook), le site web Let’s Work et Easypay resteront disponibles. Easypay est accessible uniquement via VPN.",
+      "assurance": "Toutes les applications Microsoft (dont Outlook) et le site web Let’s Work resteront disponibles. Easypay reste disponible uniquement en Belgique.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T14:02:41+02:00",
+          "label": "Mise à jour",
+          "title": "Applications hors ligne ; impact plus important hors de Belgique",
+          "body": "Déjà hors ligne pour tout le monde : NxtForm, les applications mobiles NxtPlan, GoTemp et Let’s Work, NxtJob, le site web AGO, l’intranet AGO, MyAgo et AGO Insights. Cela empêche notamment de compléter les parcours, d’enregistrer les heures ou de communiquer ses disponibilités via les applications mobiles, de postuler via le site web AGO et de consulter l’intranet AGO. Le 21 octobre à partir de 15h45, la plupart des applications seront temporairement hors ligne pour une mise à jour de sécurité. Enregistrez votre travail et déconnectez-vous avant 15h45 ; créez avant 15h30 les plannings disponibles et les contrats pour les démarrages de ce soir, de cette nuit et de demain matin. Impact plus important hors de Belgique : NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry et Easypay y sont également inaccessibles, même via VPN. Les collègues Plus et les collègues d’AGO France n’ont actuellement pas accès aux applications concernées. La disponibilité indiquée dans le tableau s’applique uniquement à la Belgique. L’accès via VPN n’est pas possible."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T13:17:26+02:00",
           "label": "Mise à jour",
           "title": "Statuts de services supplémentaires et exceptions à l’interruption",
-          "body": "MyAgo et AGO Insights sont hors ligne. Le site web Let’s Work est en ligne. Toutes les applications Microsoft (dont Outlook), le site web Let’s Work et Easypay resteront disponibles pendant l’interruption prévue à partir de 15h45. Easypay est accessible uniquement via VPN."
+          "body": "MyAgo et AGO Insights sont hors ligne. Le site web Let’s Work est en ligne. Toutes les applications Microsoft (dont Outlook) et le site web Let’s Work resteront disponibles ; Easypay restera disponible uniquement en Belgique pendant l’interruption prévue à partir de 15h45. Easypay est disponible uniquement en Belgique. L’accès via VPN n’est pas possible."
         },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T12:53:44+02:00",
           "label": "Mise à jour",
           "title": "Mise à jour de sécurité prévue à partir de 15h45",
-          "body": "Le 21 octobre, nous mettrons temporairement la plupart des applications hors ligne à partir de 15h45 par précaution, afin d’installer immédiatement la mise à jour de sécurité du fournisseur externe. Enregistrez votre travail et déconnectez-vous avant 15h45. Nous vous informerons dès que tout sera de nouveau en ligne. Toutes les applications Microsoft, le site web Let’s Work et Easypay resteront disponibles."
+          "body": "Le 21 octobre, nous mettrons temporairement la plupart des applications hors ligne à partir de 15h45 par précaution, afin d’installer immédiatement la mise à jour de sécurité du fournisseur externe. Enregistrez votre travail et déconnectez-vous avant 15h45. Nous vous informerons dès que tout sera de nouveau en ligne. Toutes les applications Microsoft et le site web Let’s Work resteront disponibles. Easypay restera disponible uniquement en Belgique."
         },
         {
           "date": "2026-10-21",
@@ -319,21 +343,21 @@
           "timestamp": "2026-10-21T12:53:44+02:00",
           "label": "Mise à jour",
           "title": "Harry : contrats avant 15h30 et aide via buddy@ago.jobs",
-          "body": "Harry sera également indisponible dans les agences à partir de 15h45. Cela peut durer plus d’1 heure. Créez avant 15h30 tous les contrats pour les démarrages de ce soir, de cette nuit et de demain matin. Outlook reste disponible. Envoyez les demandes de contrats reçues par e-mail ou par téléphone après 15h30 à buddy@ago.jobs, avec toutes les données nécessaires. L’équipe se charge de la déclaration Dimona dans les délais. Vérifiez vos plannings dès que Harry sera de nouveau disponible."
+          "body": "Harry sera également indisponible dans les agences à partir de 15h45. Cela peut durer plus d’1 heure. Créez avant 15h30 tous les contrats pour les démarrages de ce soir, de cette nuit et de demain matin. Outlook reste disponible. Pour les contrats Harry après 15h30, envoyez toutes les données nécessaires à buddy@ago.jobs. L’équipe se charge de la déclaration Dimona dans les délais. Vérifiez vos plannings dès que Harry sera de nouveau disponible."
         },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T11:11:32+02:00",
           "label": "Mise à jour",
-          "title": "Easypay disponible via VPN",
-          "body": "Easypay est en ligne et accessible uniquement via VPN."
+          "title": "Easypay disponible uniquement en Belgique",
+          "body": "Easypay est disponible uniquement en Belgique. L’accès via VPN n’est pas possible."
         },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T11:11:32+02:00",
           "label": "Mise à jour",
-          "title": "Applications hors ligne et accès via VPN",
-          "body": "NxtForm, les applications mobiles NxtPlan, GoTemp et Let’s Work, NxtJob, le site web AGO et l’intranet AGO sont hors ligne. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project et Harry sont en ligne, mais accessibles uniquement via VPN."
+          "title": "Applications hors ligne et disponibilité en Belgique",
+          "body": "NxtForm, les applications mobiles NxtPlan, GoTemp et Let’s Work, NxtJob, le site web AGO et l’intranet AGO sont hors ligne. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project et Harry sont disponibles uniquement en Belgique. L’accès via VPN n’est pas possible."
         },
         {
           "date": "2026-10-21",
@@ -347,12 +371,12 @@
         "title": "Que dire aux clients et aux candidats ?",
         "body": "Si des clients ou des candidats vous posent des questions, vous pouvez dire : « En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, nous avons temporairement mis certaines applications hors ligne par précaution. Nous prévoyons qu’elles seront de nouveau disponibles vers 17h. »"
       },
-      "contractInstructions": "Envoyez les demandes de contrats reçues par e-mail ou par téléphone après 15h30 à buddy@ago.jobs, avec toutes les données nécessaires. L’équipe se charge de la déclaration Dimona dans les délais. Vérifiez vos plannings dès que Harry sera de nouveau disponible."
+      "contractInstructions": "Pour les contrats Harry après 15h30, envoyez toutes les données nécessaires à buddy@ago.jobs. L’équipe se charge de la déclaration Dimona dans les délais. Vérifiez vos plannings dès que Harry sera de nouveau disponible."
     }
   },
   "communicationAdvice": {
     "title": "Wat zeggen tegen klanten en kandidaten?",
     "body": "Krijg je vragen van klanten of kandidaten? Dan kan je zeggen: “Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier hebben we enkele toepassingen uit voorzorg tijdelijk offline gehaald. We verwachten dat ze rond 17 uur weer beschikbaar zijn.”"
   },
-  "contractInstructions": "Stuur contractaanvragen die na 15.30 uur per mail of telefonisch binnenkomen naar buddy@ago.jobs, met alle nodige gegevens. Zij zorgen voor de tijdige Dimona-aangifte. Controleer je planningen zodra Harry weer beschikbaar is."
+  "contractInstructions": "Voor Harry-contracten na 15.30 uur mail je alle nodige gegevens naar buddy@ago.jobs. Zij zorgen voor de tijdige Dimona-aangifte. Controleer je planningen zodra Harry weer beschikbaar is."
 }
