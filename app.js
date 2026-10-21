@@ -8,8 +8,7 @@ const messages = {
     intro: 'Bekijk wat beschikbaar is, waar er een probleem is en wat we doen om het op te lossen.',
     refresh: 'Vernieuwen', currentIncident: 'Actuele melding', recovery: 'Verwacht herstel', overview: 'OVERZICHT',
     services: 'Status per toepassing', manual: 'Handmatig bijgewerkt', impact: 'Wat betekent dit voor jou?',
-    unavailable: 'Impact', vpnOnly: 'Beschikbaar via VPN', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
-    maintenance: time => `Onderhoud gepland vanaf ${time}`,
+    unavailable: 'Impact', belgiumOnly: 'Alleen in België beschikbaar', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
     maintenanceOffline: time => `Tijdelijk offline voor onderhoud vanaf ${time}`,
     footer: 'Een helder overzicht. Bijgewerkt zodra er nieuwe informatie is.', timezone: 'Alle tijden zijn Belgische tijd.',
     loading: 'Statusinformatie wordt geladen…', updated: (date, time) => `Laatst bijgewerkt op ${date} om ${time}`,
@@ -26,8 +25,7 @@ const messages = {
     intro: 'See what is available, where there is a problem and what we are doing to resolve it.',
     refresh: 'Refresh', currentIncident: 'Current incident', recovery: 'Expected recovery', overview: 'OVERVIEW',
     services: 'Status by application', manual: 'Manually updated', impact: 'What does this mean for you?',
-    unavailable: 'Impact', vpnOnly: 'Available via VPN', latest: 'LATEST INFORMATION', updates: 'Updates',
-    maintenance: time => `Maintenance scheduled from ${time}`,
+    unavailable: 'Impact', belgiumOnly: 'Available in Belgium only', latest: 'LATEST INFORMATION', updates: 'Updates',
     maintenanceOffline: time => `Temporarily offline for maintenance from ${time}`,
     footer: 'A clear overview. Updated as soon as new information is available.', timezone: 'All times are Belgian time.',
     loading: 'Loading status information…', updated: (date, time) => `Last updated on ${date} at ${time}`,
@@ -44,8 +42,7 @@ const messages = {
     intro: 'Consultez les services disponibles, les problèmes en cours et les mesures prises pour les résoudre.',
     refresh: 'Actualiser', currentIncident: 'Incident en cours', recovery: 'Rétablissement prévu', overview: 'VUE D’ENSEMBLE',
     services: 'État par application', manual: 'Mise à jour manuelle', impact: 'Qu’est-ce que cela signifie pour vous ?',
-    unavailable: 'Impact', vpnOnly: 'Disponible via VPN', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
-    maintenance: time => `Maintenance prévue à partir de ${time}`,
+    unavailable: 'Impact', belgiumOnly: 'Disponible en Belgique uniquement', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
     maintenanceOffline: time => `Temporairement hors ligne pour maintenance à partir de ${time}`,
     footer: 'Une vue d’ensemble claire. Mise à jour dès que de nouvelles informations sont disponibles.', timezone: 'Toutes les heures sont indiquées à l’heure belge.',
     loading: 'Chargement des informations de statut…', updated: (date, time) => `Dernière mise à jour le ${date} à ${time}`,
@@ -105,13 +102,12 @@ function render() {
     const row = element('div', 'service-row');
     const details = element('div', 'service-status');
     const badge = element('span', `badge status-${status}`);
-    const statusLabel = status === 'operational' && service.access === 'vpn' ? copy.vpnOnly : copy.statuses[status];
+    const statusLabel = status === 'operational' && service.access === 'belgium' ? copy.belgiumOnly : copy.statuses[status];
     badge.append(element('span', 'dot'), document.createTextNode(statusLabel));
     details.append(badge);
-    if (service.maintenanceStartsAt) {
+    if (service.maintenanceStartsAt && status !== 'offline') {
       const start = new Date(service.maintenanceStartsAt);
-      const label = status === 'offline' ? copy.maintenance : copy.maintenanceOffline;
-      const notice = element('time', 'maintenance-note', label(timeFormat.format(start)));
+      const notice = element('time', 'maintenance-note', copy.maintenanceOffline(timeFormat.format(start)));
       notice.dateTime = service.maintenanceStartsAt;
       notice.title = `${dateFormat.format(start)} · ${timeFormat.format(start)}`;
       details.append(notice);
