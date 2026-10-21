@@ -26,6 +26,26 @@
       <p id="feedback" role="status" aria-live="polite"></p>
     </section>
     <div id="content" hidden>
+      <section id="update-progress" class="update-progress" aria-labelledby="progress-title" hidden>
+        <div class="progress-visual" aria-hidden="true">
+          <div class="progress-halo"></div>
+          <div class="progress-pulse"></div>
+          <div class="progress-pulse progress-pulse-delayed"></div>
+          <div class="progress-orbit progress-orbit-outer"></div>
+          <div class="progress-orbit progress-orbit-inner"></div>
+          <div class="progress-orbit progress-orbit-detail"></div>
+          <span class="progress-spark"></span><span class="progress-spark"></span><span class="progress-spark"></span>
+          <div class="progress-core">
+            <svg viewBox="0 0 48 48" fill="none"><path class="progress-shield" d="M24 5 39 11v12c0 9-6 15-15 20C15 38 9 32 9 23V11L24 5Z" stroke="currentColor" stroke-width="1.5"/><rect x="18" y="22" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M20 22v-4a4 4 0 0 1 8 0v4m-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="progress-copy">
+          <p class="progress-label"><span aria-hidden="true"></span><span data-i18n="progressLabel">VEILIGHEIDSUPDATE</span></p>
+          <h2 id="progress-title" data-i18n="progressTitle">De update is in uitvoering.</h2>
+          <p data-i18n="progressBody">We werken aan het veilig opnieuw beschikbaar maken van de applicaties. Zodra er nieuws is, lees je het hier.</p>
+          <div class="progress-activity" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </section>
       <section class="incident" aria-labelledby="incident-title">
         <div class="incident-top"><span class="incident-note" data-i18n="currentIncident">Actuele melding</span></div>
         <h2 id="incident-title"></h2><p id="summary"></p>

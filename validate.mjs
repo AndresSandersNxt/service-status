@@ -20,6 +20,7 @@ function validateContent(content) {
   }
 }
 assert.ok(Number.isFinite(Date.parse(data.updatedAt)), 'updatedAt moet een geldige datum zijn');
+if (data.updateInProgress !== undefined) assert.equal(typeof data.updateInProgress, 'boolean', 'updateInProgress moet een boolean zijn');
 assert.ok(Array.isArray(data.services));
 for (const service of data.services) {
   text(service.name);

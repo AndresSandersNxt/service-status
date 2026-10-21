@@ -7,6 +7,8 @@ const messages = {
     headingFirst: 'Hoe staan onze', headingSecond: 'applicaties ervoor?',
     intro: 'Bekijk wat beschikbaar is, waar er een probleem is en wat we doen om het op te lossen.',
     refresh: 'Vernieuwen', currentIncident: 'Actuele melding', recovery: 'Verwacht herstel', overview: 'OVERZICHT',
+    progressLabel: 'VEILIGHEIDSUPDATE', progressTitle: 'De update is in uitvoering.',
+    progressBody: 'We werken aan het veilig opnieuw beschikbaar maken van de applicaties. Zodra er nieuws is, lees je het hier.',
     services: 'Status per applicatie', manual: 'Handmatig bijgewerkt', impact: 'Wat betekent dit voor jou?',
     unavailable: 'Impact', belgiumOnly: 'Alleen in België beschikbaar', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
     maintenanceOffline: time => `Tijdelijk offline voor onderhoud vanaf ${time}`,
@@ -24,6 +26,8 @@ const messages = {
     headingFirst: 'How are our', headingSecond: 'applications doing?',
     intro: 'See what is available, where there is a problem and what we are doing to resolve it.',
     refresh: 'Refresh', currentIncident: 'Current incident', recovery: 'Expected recovery', overview: 'OVERVIEW',
+    progressLabel: 'SECURITY UPDATE', progressTitle: 'The update is in progress.',
+    progressBody: 'We’re working to bring the applications back online safely. As soon as there’s news, you’ll find it here.',
     services: 'Status by application', manual: 'Manually updated', impact: 'What does this mean for you?',
     unavailable: 'Impact', belgiumOnly: 'Available in Belgium only', latest: 'LATEST INFORMATION', updates: 'Updates',
     maintenanceOffline: time => `Temporarily offline for maintenance from ${time}`,
@@ -41,6 +45,8 @@ const messages = {
     headingFirst: 'Quel est l’état de', headingSecond: 'nos applications ?',
     intro: 'Consultez les services disponibles, les problèmes en cours et les mesures prises pour les résoudre.',
     refresh: 'Actualiser', currentIncident: 'Incident en cours', recovery: 'Rétablissement prévu', overview: 'VUE D’ENSEMBLE',
+    progressLabel: 'MISE À JOUR DE SÉCURITÉ', progressTitle: 'La mise à jour est en cours.',
+    progressBody: 'Nous travaillons à remettre les applications en ligne en toute sécurité. Dès qu’il y aura du nouveau, vous le lirez ici.',
     services: 'État par application', manual: 'Mise à jour manuelle', impact: 'Qu’est-ce que cela signifie pour vous ?',
     unavailable: 'Impact', belgiumOnly: 'Disponible en Belgique uniquement', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
     maintenanceOffline: time => `Temporairement hors ligne pour maintenance à partir de ${time}`,
@@ -84,6 +90,7 @@ function render() {
   $('feedback').textContent = feedback ? copy[feedback] : '';
   if (!currentData) { $('updated').textContent = copy.loading; return; }
   const data = language === 'nl' ? currentData : currentData.translations[language];
+  $('update-progress').hidden = currentData.updateInProgress !== true;
   const dateFormat = new Intl.DateTimeFormat(copy.locale, {dateStyle: 'long', timeZone: 'Europe/Brussels'});
   const timeFormat = new Intl.DateTimeFormat(copy.locale, {hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Brussels'});
   const updated = new Date(currentData.updatedAt);
