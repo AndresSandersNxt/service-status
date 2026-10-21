@@ -8,7 +8,7 @@ const messages = {
     intro: 'Bekijk wat beschikbaar is, waar er een probleem is en wat we doen om het op te lossen.',
     refresh: 'Vernieuwen', currentIncident: 'Actuele melding', recovery: 'Verwacht herstel', overview: 'OVERZICHT',
     services: 'Status per toepassing', manual: 'Handmatig bijgewerkt', impact: 'Wat betekent dit voor jou?',
-    unavailable: 'Tijdelijk niet mogelijk', available: 'Blijft werken voor consulenten via VPN', vpnOnly: 'Beschikbaar via VPN', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
+    unavailable: 'Tijdelijk niet mogelijk', vpnOnly: 'Beschikbaar via VPN', latest: 'LAATSTE INFORMATIE', updates: 'Updates',
     footer: 'Een helder overzicht. Bijgewerkt zodra er nieuwe informatie is.', timezone: 'Alle tijden zijn Belgische tijd.',
     loading: 'Statusinformatie wordt geladen…', updated: (date, time) => `Laatst bijgewerkt op ${date} om ${time}`,
     refreshed: 'De laatste statusinformatie is opgehaald.',
@@ -24,7 +24,7 @@ const messages = {
     intro: 'See what is available, where there is a problem and what we are doing to resolve it.',
     refresh: 'Refresh', currentIncident: 'Current incident', recovery: 'Expected recovery', overview: 'OVERVIEW',
     services: 'Status by application', manual: 'Manually updated', impact: 'What does this mean for you?',
-    unavailable: 'Temporarily unavailable', available: 'Still available to consultants via VPN', vpnOnly: 'Available via VPN', latest: 'LATEST INFORMATION', updates: 'Updates',
+    unavailable: 'Temporarily unavailable', vpnOnly: 'Available via VPN', latest: 'LATEST INFORMATION', updates: 'Updates',
     footer: 'A clear overview. Updated as soon as new information is available.', timezone: 'All times are Belgian time.',
     loading: 'Loading status information…', updated: (date, time) => `Last updated on ${date} at ${time}`,
     refreshed: 'The latest status information has been retrieved.',
@@ -40,7 +40,7 @@ const messages = {
     intro: 'Consultez les services disponibles, les problèmes en cours et les mesures prises pour les résoudre.',
     refresh: 'Actualiser', currentIncident: 'Incident en cours', recovery: 'Rétablissement prévu', overview: 'VUE D’ENSEMBLE',
     services: 'État par application', manual: 'Mise à jour manuelle', impact: 'Qu’est-ce que cela signifie pour vous ?',
-    unavailable: 'Temporairement indisponible', available: 'Toujours disponible pour les consultants via VPN', vpnOnly: 'Disponible via VPN', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
+    unavailable: 'Temporairement indisponible', vpnOnly: 'Disponible via VPN', latest: 'DERNIÈRES INFORMATIONS', updates: 'Mises à jour',
     footer: 'Une vue d’ensemble claire. Mise à jour dès que de nouvelles informations sont disponibles.', timezone: 'Toutes les heures sont indiquées à l’heure belge.',
     loading: 'Chargement des informations de statut…', updated: (date, time) => `Dernière mise à jour le ${date} à ${time}`,
     refreshed: 'Les dernières informations de statut ont été récupérées.',
@@ -90,7 +90,6 @@ function render() {
   $('summary').textContent = data.incident.summary;
   $('expectation').textContent = data.incident.expectation;
   $('assurance').textContent = data.assurance;
-  list('available', data.available);
   list('unavailable', data.unavailable);
   $('service-list').replaceChildren(...currentData.services.map(service => {
     const status = Object.hasOwn(copy.statuses, service.status) ? service.status : 'unknown';

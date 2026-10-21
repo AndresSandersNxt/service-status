@@ -119,11 +119,9 @@ h2 { margin: 0 0 16px; color: var(--ink); font: 600 29px/1.25 var(--serif); lett
 .status-degraded { color: #805609; background: #fff5df; }
 .status-unknown { color: #555555; background: #f1f1f1; }
 
-.impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 32px; }
 .impact-card { padding: 30px 32px; border: 1px solid var(--line); }
 .card-symbol { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin-bottom: 20px; border-radius: 50%; font-size: 20px; }
 .amber-text { color: var(--coral-text); background: #fff0f1; }
-.green-text { color: var(--green); background: #edf5ef; }
 .impact-card h2 { max-width: 380px; font-size: 25px; }
 .impact-card ul { margin: 18px 0 0; padding-left: 20px; font-size: 17px; }
 .impact-card li { padding-left: 3px; }
@@ -181,7 +179,6 @@ noscript section + section { margin-top: 28px; }
   .section { margin-top: 40px; }
   .section-heading { align-items: start; flex-wrap: wrap; gap: 12px; }
   .section-heading h2 { font-size: 26px; }
-  .impact-grid { grid-template-columns: 1fr; gap: 18px; margin-top: 24px; }
   .impact-card { padding: 26px 24px; }
   .service-row { gap: 12px; padding-block: 17px; }
   .service-name { min-width: 0; overflow-wrap: anywhere; font-size: 16px; }

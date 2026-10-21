@@ -45,7 +45,7 @@ Toegestane statussen: `offline` (tijdelijk offline), `operational` (beschikbaar)
 
 Voeg bij diensten die uitsluitend via VPN bereikbaar zijn `"access": "vpn"` toe. Bij de status `operational` toont de pagina dan expliciet **Beschikbaar via VPN**, met de bijbehorende Engelse en Franse vertaling. Verwijder `access` zodra de dienst ook zonder VPN bereikbaar is.
 
-De pagina haalt elke minuut de laatste gegevens op wanneer het tabblad zichtbaar is. Bezoekers kunnen ook op **Vernieuwen** klikken. Publicatie en caching via GitHub kunnen kort duren. Het tijdstip op de pagina verwijst naar de inhoudelijke update, niet naar de laatste raadpleging.
+De pagina haalt elke minuut de laatste gegevens op wanneer het tabblad zichtbaar is. Bezoekers kunnen ook op **Vernieuwen** klikken. Publicatie en caching via GitHub kunnen kort duren. De publicatie gebruikt automatisch versiegebonden URL’s voor JavaScript en CSS, zodat een nieuwe pagina geen verouderd script uit de browsercache gebruikt. Het tijdstip op de pagina verwijst naar de inhoudelijke update, niet naar de laatste raadpleging.
 
 ## Talen
 
@@ -58,6 +58,8 @@ Maak deze repository publiek. Kies bij **Settings → Pages → Build and deploy
 ## Lokaal bekijken
 
 Voer `python3 -m http.server 8080` uit in deze map en open `http://localhost:8080`. Controleer de gegevens met `node validate.mjs`.
+
+Test de publicatiebestanden met `node --test build.test.mjs`. Maak ze aan met `node build.mjs` en bekijk ze met `python3 -m http.server 8080 --directory _site`.
 
 In Conductor start de **Run**-knop dezelfde server op de toegewezen `CONDUCTOR_PORT`, zodat meerdere werkruimtes tegelijk kunnen draaien. De gedeelde configuratie staat in `.conductor/settings.toml` en wordt door Conductor gebruikt zodra die op de standaardbranch is samengevoegd.
 
