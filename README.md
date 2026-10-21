@@ -4,26 +4,48 @@ Publieke statuspagina in het Nederlands, Engels en Frans, gehost op GitHub Pages
 
 ## Ontwikkeling en publicatie
 
-Nieuwe functies, correcties en statusupdates volgen deze route: **featurebranch → `development` → `main`**.
+Nieuwe functies, correcties en statusupdates volgen deze route: **featurebranch → `development` → `main` → GitHub Pages**.
 
-1. Maak een nieuwe branch vanaf de laatste `development`. Dit is de standaardbranch voor nieuwe pull requests.
-2. Open een pull request naar `development`. GitHub Actions controleert de JavaScript-syntaxis en de statusgegevens. Test de pagina lokaal voordat je de wijziging samenvoegt.
-3. Open zodra de wijzigingen klaar zijn voor publicatie een pull request van `development` naar `main`.
-4. Na samenvoegen naar `main` publiceert GitHub Pages de website. Wijzigingen op `development` publiceren de live website niet.
+1. Haal de laatste wijzigingen op met `git fetch origin` en maak een eigen featurebranch of worktree vanaf `origin/development`. Werk niet rechtstreeks op `development` of `main`.
+2. Gebruik in Conductor `development` als basisbranch voor nieuwe werkruimtes. Elke werkruimte heeft een eigen featurebranch; bestaande werkruimtes veranderen niet automatisch van basisbranch.
+3. Test de pagina lokaal en voer `node --check app.js`, `node validate.mjs` en `git diff --check` uit.
+4. Open een pull request naar `development` (`gh pr create --base development`). Na samenvoegen staan de wijzigingen op `development`; de live website verandert nog niet.
+5. Zodra de wijzigingen klaar zijn voor publicatie, kan elke ontwikkelaar met de vereiste repositoryrechten een release-pull-request van `development` naar `main` openen en samenvoegen (`gh pr create --base main --head development`). Agents doen dit alleen na een expliciet verzoek om publicatie. Een release bevat alle wijzigingen die op `development` klaarstaan.
+6. Voeg de release samen met **Create a merge commit**, niet met squash of rebase, zodat `development` en `main` hun gedeelde geschiedenis behouden. GitHub Actions controleert daarna de statusgegevens en GitHub Pages publiceert de website. Volg de publicatie in het tabblad **Actions**.
+
+`development` is de standaardbranch voor nieuwe ontwikkeling en pull requests. `main` is de productiebranch. De gedeelde instructies voor agents staan in [`AGENTS.md`](AGENTS.md).
+
+### Overdracht na wijzigingen
+
+Agents vermelden bij de overdracht altijd waar de wijzigingen staan: alleen lokaal, op een featurebranch, in een open PR, samengevoegd naar `development` of succesvol uitgerold naar productie. Meld een stap pas als voltooid nadat die is gecontroleerd.
+
+Na samenvoegen naar `development` moet de agent expliciet melden:
+
+> De wijzigingen zijn samengevoegd naar `development`. Ze zijn nog niet zichtbaar op de live website. Om ze te publiceren, voeg je een release-pull-request van `development` naar `main` samen; dat start de GitHub Pages-deployment. Deze release bevat alle wijzigingen die op `development` klaarstaan.
+
+Voeg waar beschikbaar de PR-link toe. Staat de wijziging nog lokaal of is de feature-PR nog open, meld dan dat samenvoegen naar `development` de volgende stap is. Na samenvoegen naar `main` is de deployment nog in uitvoering; meld pas dat de wijzigingen zijn uitgerold nadat GitHub Actions succes bevestigt.
+
+## Samenwerken en mergeconflicten beperken
+
+- Gebruik per taak een eigen, kortlevende branch met een unieke naam, bijvoorbeeld `andres/update-vpn-status`. Deel geen actieve featurebranch tussen ontwikkelaars of agents.
+- Houd pull requests klein en gericht. Stem af wie dezelfde bestanden bewerkt, vooral `status.json` en de vertalingen. Voeg statusupdates snel samen zodat andere branches niet onnodig achterlopen.
+- Commit je werk voordat je de laatste wijzigingen integreert. Voer op je featurebranch `git fetch origin` en vervolgens `git merge origin/development` uit voordat je de PR laat samenvoegen. Los eventuele conflicten op die featurebranch op en voer de controles opnieuw uit. Force-push niet naar gedeelde branches.
+- Behoud bij conflicten de bedoelde wijzigingen van beide bijdragers. Controleer bij `status.json` ook het tijdstip, de updates en alle drie de talen; kies niet blind het volledige bestand van één kant.
+- Komt een dringende hotfix uitzonderlijk rechtstreeks op `main` terecht, breng die dan meteen terug naar `development` via een PR van `main` naar `development`, eveneens met een mergecommit.
 
 ## Een update publiceren
 
-1. Maak een branch vanaf `development`, open `status.json` in GitHub en kies het potlood om te bewerken.
+1. Maak een eigen branch vanaf de laatste `origin/development` en bewerk `status.json` op die branch. Dit kan ook via het potlood in GitHub.
 2. Pas de betrokken toepassing(en), de melding en de verwachte hersteltijd aan. Zet `updatedAt` op het tijdstip van de inhoudelijke update, met de juiste Belgische tijdzone (`+02:00` in de zomertijd, `+01:00` in de wintertijd).
 3. Voeg een nieuw bericht bovenaan `updates` toe. Gebruik bij `date` het formaat `YYYY-MM-DD`. Werk dezelfde inhoud ook bij in `translations.en` en `translations.fr`: titel, incident, impact, geruststelling en alle updates. Dienststatussen en `updatedAt` worden gedeeld tussen de talen. Optionele `localizedNames` bij een dienst bevatten de Engelse (`en`) en Franse (`fr`) benaming.
 4. Werk ook `available`, `unavailable` en `assurance` bij als de impact wijzigt. Bij volledig herstel pas je de melding en fase aan, verwijder je de oude herstelverwachting uit de tekst en zet je de diensten op `operational`.
-5. Sla de wijziging op je featurebranch op en open een pull request naar `development`. Publiceer de geteste wijzigingen daarna met een pull request van `development` naar `main`. Volg de controles en publicatie in het tabblad **Actions**.
+5. Open een pull request van je featurebranch naar `development`. Publiceer de geteste wijzigingen daarna via een release-pull-request van `development` naar `main`, zoals hierboven beschreven.
 
 Toegestane statussen: `offline` (tijdelijk offline), `operational` (beschikbaar), `degraded` (beperkt beschikbaar), `unknown` (nog niet bevestigd).
 
 Voeg bij diensten die uitsluitend via VPN bereikbaar zijn `"access": "vpn"` toe. Bij de status `operational` toont de pagina dan expliciet **Beschikbaar via VPN**, met de bijbehorende Engelse en Franse vertaling. Verwijder `access` zodra de dienst ook zonder VPN bereikbaar is.
 
-De pagina haalt elke minuut de laatste gegevens op wanneer het tabblad zichtbaar is. Bezoekers kunnen ook op **Vernieuwen** klikken. Publicatie en caching via GitHub kunnen kort duren. Het tijdstip op de pagina verwijst naar de inhoudelijke update, niet naar de laatste raadpleging.
+De pagina haalt elke minuut de laatste gegevens op wanneer het tabblad zichtbaar is. Bezoekers kunnen ook op **Vernieuwen** klikken. Publicatie en caching via GitHub kunnen kort duren. De publicatie gebruikt automatisch versiegebonden URL’s voor JavaScript en CSS, zodat een nieuwe pagina geen verouderd script uit de browsercache gebruikt. Het tijdstip op de pagina verwijst naar de inhoudelijke update, niet naar de laatste raadpleging.
 
 ## Talen
 
@@ -36,6 +58,10 @@ Maak deze repository publiek. Kies bij **Settings → Pages → Build and deploy
 ## Lokaal bekijken
 
 Voer `python3 -m http.server 8080` uit in deze map en open `http://localhost:8080`. Controleer de gegevens met `node validate.mjs`.
+
+Test de publicatiebestanden met `node --test build.test.mjs`. Maak ze aan met `node build.mjs` en bekijk ze met `python3 -m http.server 8080 --directory _site`.
+
+In Conductor start de **Run**-knop dezelfde server op de toegewezen `CONDUCTOR_PORT`, zodat meerdere werkruimtes tegelijk kunnen draaien. De gedeelde configuratie staat in `.conductor/settings.toml` en wordt door Conductor gebruikt zodra die op de standaardbranch is samengevoegd.
 
 ## Redactioneel
 

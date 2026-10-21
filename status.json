@@ -3,7 +3,7 @@
   "updatedAt": "2026-10-21T11:11:32+02:00",
   "incident": {
     "title": "Enkele toepassingen tijdelijk offline",
-    "summary": "Vanwege een wereldwijd gemeld beveiligingsprobleem in software van een externe leverancier hebben we enkele toepassingen uit voorzorg tijdelijk offline gehaald. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry en Easypay blijven beschikbaar, uitsluitend via VPN.",
+    "summary": "Vanwege een wereldwijd gemeld beveiligingsprobleem in software van een externe leverancier hebben we enkele toepassingen uit voorzorg tijdelijk offline gehaald.",
     "phase": "In behandeling",
     "expectation": "De leverancier verwacht op 21 oktober rond 16.00 uur een oplossing beschikbaar te stellen. Zodra die beschikbaar is, installeren en testen we die meteen. We verwachten de toepassingen rond 17.00 uur opnieuw beschikbaar te hebben, als de installatie en de tests goed verlopen. Dit is een verwachting, geen bevestigde hersteltijd."
   },
@@ -131,7 +131,7 @@
       "title": "Service status",
       "incident": {
         "title": "Some applications are temporarily offline",
-        "summary": "Following reports of a worldwide security issue in software from an external supplier, we have temporarily taken some applications offline as a precaution. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry and Easypay remain available, only via VPN.",
+        "summary": "Following reports of a worldwide security issue in software from an external supplier, we have temporarily taken some applications offline as a precaution.",
         "phase": "In progress",
         "expectation": "The supplier expects to release a fix on 21 October at around 16:00. As soon as it is available, we will install and test it immediately. We expect the applications to be available again at around 17:00, provided the installation and tests are successful. This is an estimate, not a confirmed recovery time."
       },
@@ -174,7 +174,7 @@
       "title": "État des services",
       "incident": {
         "title": "Certaines applications sont temporairement hors ligne",
-        "summary": "À la suite du signalement d’un problème de sécurité mondial dans un logiciel d’un fournisseur externe, nous avons temporairement mis certaines applications hors ligne par précaution. NxtPlan, NxtMatch, NxtPay, Salesbuddy, Administratie project, Harry et Easypay restent disponibles, uniquement via VPN.",
+        "summary": "À la suite du signalement d’un problème de sécurité mondial dans un logiciel d’un fournisseur externe, nous avons temporairement mis certaines applications hors ligne par précaution.",
         "phase": "En cours de traitement",
         "expectation": "Le fournisseur prévoit de proposer un correctif le 21 octobre vers 16 h. Dès qu’il sera disponible, nous l’installerons et le testerons immédiatement. Nous prévoyons que les applications seront à nouveau disponibles vers 17 h, sous réserve du bon déroulement de l’installation et des tests. Il s’agit d’une estimation, et non d’une heure de rétablissement confirmée."
       },
