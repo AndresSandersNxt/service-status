@@ -148,7 +148,7 @@
     "NxtForm is opnieuw beschikbaar voor iedereen, in alle landen",
     "Easypay blijft alleen in België beschikbaar"
   ],
-  "assurance": "Alle Microsoft-applicaties (waaronder Outlook) blijven beschikbaar. Harry en NxtPay zijn opnieuw beschikbaar voor iedereen, in alle landen. NxtAdmin is opnieuw beschikbaar. Easypay blijft alleen in België beschikbaar. NxtMatch en NxtForm zijn opnieuw beschikbaar voor iedereen, in alle landen.",
+  "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch en NxtForm zijn opnieuw beschikbaar voor iedereen, in alle landen.",
   "updates": [
     {
       "date": "2026-10-21",
@@ -300,7 +300,7 @@
         "NxtForm is available again for everyone, in all countries",
         "Easypay remains available in Belgium only"
       ],
-      "assurance": "All Microsoft applications (including Outlook) remain available. Harry and NxtPay are available again for everyone, in all countries. NxtAdmin is available again. Easypay remains available in Belgium only. NxtMatch and NxtForm are available again for everyone, in all countries.",
+      "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch and NxtForm are available again for everyone, in all countries.",
       "updates": [
         {
           "date": "2026-10-21",
@@ -431,7 +431,7 @@
       ],
       "communicationAdvice": {
         "title": "What to tell customers and candidates",
-        "body": "If customers or candidates ask questions, you can say: “Due to a worldwide security issue at an external software supplier, we have temporarily taken some applications offline as a precaution. Harry and NxtPay are available again for everyone, in all countries. NxtAdmin is available again. NxtMatch and NxtForm are available again for everyone, in all countries. Recovery of the remaining services is taking longer than expected; no new recovery time has been confirmed.”"
+        "body": "If customers or candidates ask questions, you can say: “Due to a worldwide security issue at an external software supplier, we are working hard on a security update. As a result, some applications are temporarily unavailable.”"
       },
       "contractInstructions": "Harry is available again in all countries. Check your schedules now that Harry is available again."
     },
@@ -457,7 +457,7 @@
         "NxtForm est de nouveau disponible pour tout le monde, dans tous les pays",
         "Easypay reste disponible uniquement en Belgique"
       ],
-      "assurance": "Toutes les applications Microsoft (dont Outlook) restent disponibles. Harry et NxtPay sont de nouveau disponibles pour tout le monde, dans tous les pays. NxtAdmin est de nouveau disponible. Easypay reste disponible uniquement en Belgique. NxtMatch et NxtForm sont de nouveau disponibles pour tout le monde, dans tous les pays.",
+      "assurance": "Harry, NxtPay, NxtAdmin, NxtMatch et NxtForm sont de nouveau disponibles pour tout le monde, dans tous les pays.",
       "updates": [
         {
           "date": "2026-10-21",
@@ -588,14 +588,14 @@
       ],
       "communicationAdvice": {
         "title": "Que dire aux clients et aux candidats ?",
-        "body": "Si des clients ou des candidats vous posent des questions, vous pouvez dire : « En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, nous avons temporairement mis certaines applications hors ligne par précaution. Harry et NxtPay sont de nouveau disponibles pour tout le monde, dans tous les pays. NxtAdmin est de nouveau disponible. NxtMatch et NxtForm sont de nouveau disponibles pour tout le monde, dans tous les pays. Le rétablissement des autres services prend plus de temps que prévu ; aucun nouvel horaire de rétablissement n’a été confirmé. »"
+        "body": "Si des clients ou des candidats vous posent des questions, vous pouvez dire : « En raison d’un problème de sécurité mondial chez un fournisseur de logiciels externe, nous travaillons activement à une mise à jour de sécurité. Certaines applications sont donc temporairement indisponibles. »"
       },
       "contractInstructions": "Harry est de nouveau disponible dans tous les pays. Vérifiez vos plannings maintenant que Harry est de nouveau disponible."
     }
   },
   "communicationAdvice": {
     "title": "Wat zeggen tegen klanten en kandidaten?",
-    "body": "Krijg je vragen van klanten of kandidaten? Dan kan je zeggen: “Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier hebben we enkele applicaties uit voorzorg tijdelijk offline gehaald. Harry en NxtPay zijn opnieuw beschikbaar voor iedereen, in alle landen. NxtAdmin is opnieuw beschikbaar. NxtMatch en NxtForm zijn opnieuw beschikbaar voor iedereen, in alle landen. Het herstel van de overige diensten duurt langer dan verwacht; er is nog geen nieuwe hersteltijd bevestigd.”"
+    "body": "Krijg je vragen van klanten of kandidaten? Dan kan je zeggen: “Vanwege een wereldwijd beveiligingsprobleem bij een externe softwareleverancier zijn we druk bezig met een veiligheidsupdate. Daardoor zijn enkele applicaties tijdelijk niet beschikbaar.”"
   },
   "contractInstructions": "Harry is opnieuw beschikbaar in alle landen. Controleer je planningen nu Harry weer beschikbaar is."
 }

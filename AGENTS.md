@@ -28,6 +28,7 @@
 
 ## Status updates
 
+- Keep `communicationAdvice` (what to tell customers and candidates) and its English and French translations unchanged during status updates. Only edit this fixed communication text when the user explicitly asks to change it.
 - Keep the current incident notice unchanged until all applications are confirmed back online. This applies to every field in `incident` and its English and French translations, including the recovery expectation. Record intermediate recoveries in the service statuses, impact text and `updates`. Only revise the incident notice once full recovery is confirmed.
 - When the user confirms that an application is back online, this means it is available in all regions. Set its status to `operational`, remove any `access: "belgium"` restriction, and update the current impact text and recovery notice in all three languages. Do not carry forward a Belgium-only restriction for a restored application.
 

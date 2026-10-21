@@ -180,14 +180,9 @@ h2 { margin: 0 0 16px; color: var(--ink); font: 600 29px/1.25 var(--serif); lett
 .status-unknown { color: #555555; background: #f1f1f1; }
 
 .impact-card { padding: 30px 32px; border: 1px solid var(--line); }
-.card-symbol { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin-bottom: 20px; border-radius: 50%; font-size: 20px; }
-.amber-text { color: var(--coral-text); background: #fff0f1; }
 .impact-card h2 { max-width: 380px; font-size: 25px; }
-.impact-card ul { margin: 18px 0 0; padding-left: 20px; font-size: 17px; }
-.impact-card li { padding-left: 3px; }
-.impact-card li + li { margin-top: 10px; }
-.impact-card li::marker { color: var(--muted); }
 .assurance { display: flex; align-items: center; gap: 13px; margin-top: 20px; padding: 18px 24px; background: #f1f6f2; color: var(--green); font-size: 17px; font-weight: 500; }
+.assurance h2 { margin: 0 0 6px; color: inherit; font: inherit; font-weight: 650; letter-spacing: normal; }
 .assurance p { margin: 0; }
 .communication-advice { margin-top: 20px; }
 .communication-advice h2 { max-width: none; }
