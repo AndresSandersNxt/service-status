@@ -1,6 +1,6 @@
 {
   "title": "Servicestatus",
-  "updatedAt": "2026-10-21T15:03:33+02:00",
+  "updatedAt": "2026-10-21T15:15:04+02:00",
   "incident": {
     "title": "Veiligheidsupdate: tijdelijke onderbreking vanaf 15.45 uur",
     "summary": "Er is wereldwijd een beveiligingsprobleem gemeld in software van een externe leverancier. Enkele applicaties zijn al uit voorzorg offline gehaald. De leverancier brengt vandaag een veiligheidsupdate uit. Om die meteen te installeren, zetten we op 21 oktober de meeste applicaties vanaf 15.45 uur tijdelijk offline. Sla je werk op en log uit vóór 15.45 uur. Maak alle beschikbare planningen en alle contracten voor opstart vanavond, vannacht en morgenvroeg aan vóór 15.30 uur. Buiten België is de impact nu al groter. Applicaties die in België nog beschikbaar zijn, zijn voor collega’s van AGO France en de Plus collega's momenteel niet toegankelijk.",
@@ -116,7 +116,7 @@
     },
     {
       "name": "Let’s Work-website",
-      "status": "operational",
+      "status": "offline",
       "localizedNames": {
         "en": "Let’s Work website",
         "fr": "Site web Let’s Work"
@@ -161,6 +161,13 @@
   ],
   "assurance": "Alle Microsoft-applicaties (waaronder Outlook) blijven beschikbaar. Easypay blijft alleen in België beschikbaar.",
   "updates": [
+    {
+      "date": "2026-10-21",
+      "timestamp": "2026-10-21T15:15:04+02:00",
+      "label": "Statusupdate",
+      "title": "Let’s Work-website ook offline",
+      "body": "De Let’s Work-website is nu ook tijdelijk offline."
+    },
     {
       "date": "2026-10-21",
       "timestamp": "2026-10-21T15:03:33+02:00",
@@ -255,6 +262,13 @@
       ],
       "assurance": "All Microsoft applications (including Outlook) will remain available. Easypay remains available in Belgium only.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T15:15:04+02:00",
+          "label": "Status update",
+          "title": "Let’s Work website also offline",
+          "body": "The Let’s Work website is now also temporarily offline."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T15:03:33+02:00",
@@ -354,6 +368,13 @@
       ],
       "assurance": "Toutes les applications Microsoft (dont Outlook) resteront disponibles. Easypay reste disponible uniquement en Belgique.",
       "updates": [
+        {
+          "date": "2026-10-21",
+          "timestamp": "2026-10-21T15:15:04+02:00",
+          "label": "Mise à jour",
+          "title": "Site web Let’s Work également hors ligne",
+          "body": "Le site web Let’s Work est désormais également temporairement hors ligne."
+        },
         {
           "date": "2026-10-21",
           "timestamp": "2026-10-21T15:03:33+02:00",
