@@ -10,11 +10,13 @@ function validateContent(content) {
   for (const key of ['title', 'summary', 'phase', 'expectation']) text(content.incident[key]);
   for (const key of ['available', 'unavailable']) { assert.ok(Array.isArray(content[key])); content[key].forEach(text); }
   text(content.assurance);
+  text(content.contractInstructions);
+  for (const key of ['title', 'body']) text(content.communicationAdvice[key]);
   assert.ok(Array.isArray(content.updates));
   for (const update of content.updates) {
-    for (const key of ['date', 'label', 'title', 'body']) text(update[key]);
-    assert.match(update.date, /^\d{4}-\d{2}-\d{2}$/);
-    assert.ok(Number.isFinite(Date.parse(update.date)));
+    for (const key of ['timestamp', 'label', 'title', 'body']) text(update[key]);
+    assert.match(update.timestamp, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/, 'Updates moeten een tijdstip met tijdzone bevatten');
+    assert.ok(Number.isFinite(Date.parse(update.timestamp)), 'Ongeldig tijdstip voor update');
   }
 }
 assert.ok(Number.isFinite(Date.parse(data.updatedAt)), 'updatedAt moet een geldige datum zijn');
@@ -23,6 +25,11 @@ for (const service of data.services) {
   text(service.name);
   assert.ok(['offline', 'operational', 'degraded', 'unknown'].includes(service.status), 'Onbekende dienststatus');
   if (service.access !== undefined) assert.equal(service.access, 'vpn', 'Onbekende toegangsbeperking');
+  if (service.maintenanceStartsAt !== undefined) {
+    text(service.maintenanceStartsAt);
+    assert.match(service.maintenanceStartsAt, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/, 'Gepland onderhoud moet een tijdstip met tijdzone bevatten');
+    assert.ok(Number.isFinite(Date.parse(service.maintenanceStartsAt)), 'Ongeldig tijdstip voor gepland onderhoud');
+  }
   if (service.localizedNames) for (const language of ['en', 'fr']) text(service.localizedNames[language]);
 }
 validateContent(data);
@@ -31,6 +38,6 @@ for (const language of ['en', 'fr']) {
   assert.ok(translation, `Vertaling ontbreekt: ${language}`);
   validateContent(translation);
   for (const key of ['available', 'unavailable']) assert.equal(translation[key].length, data[key].length, `${language}: ${key} moet evenveel items bevatten`);
-  assert.deepEqual(translation.updates.map(update => update.date), data.updates.map(update => update.date), `${language}: updates moeten overeenkomen met de Nederlandse updates`);
+  assert.deepEqual(translation.updates.map(update => update.timestamp), data.updates.map(update => update.timestamp), `${language}: tijdstippen van updates moeten overeenkomen met de Nederlandse updates`);
 }
 console.log('Statusgegevens gecontroleerd in het Nederlands, Engels en Frans.');
